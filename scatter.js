@@ -1,21 +1,23 @@
 //---->GLOBAL VARIABLES FOR SCATTER PLOT<-----//
-const container = d3.select('body').append('container scatter-container'),
-    svg, 
+const container = d3.select('body').append('div').attr('class', 'container scatter-container');
+    
+let svg,
     g;
 
-const outerW,
+let outerW,
     outerH, 
     margin,
     w,
     h;
 
-const data,
+let data,
     x,
-    xAccessor = 'xVal',
     y,
-    yAccessor = 'yVal',
-    r,
-    rAccessor;
+    r;
+
+const xAccessor = 'xVal',
+    yAccessor = 'yVal';
+    //rAccessor
 
 function build() {
     // Set up containers
@@ -61,7 +63,6 @@ function build() {
         .attr('class', 'y axis')
         .call(d3.axisLeft(y)
             .tickSize(-w)
-            .tickFormat(d => d * 100 + '%')
             .tickSizeOuter(0)
             .tickPadding(5)
         );
@@ -102,20 +103,24 @@ function setup() {
   w = outerW - margin.left - margin.right;
   h = outerH - margin.top - margin.bottom;
 
-  xExtent = d3.extent(data, d => d[xAccessor]);
-  yExtent = d3.extent(data, d => d[yAccessor]);
+  const xExtent = d3.extent(data, d => d[xAccessor]);
+  const yExtent = d3.extent(data, d => d[yAccessor]);
   //rExtent = d3.extent(data, d => d[rAccessor]);
 
   x = d3.scaleLinear().rangeRound([0, w]).domain(xExtent).nice();
   y = d3.scaleLinear().rangeRound([h, 0]).domain(yExtent).nice();
   //r = d3.scaleSqrt().rangeRound([3, 10]).domain(rExtent).nice();
 
-  buildScatter();
+  build();
 }
 
 function init() {
     d3.loadData('../assets/data/scatter.csv', function(err, res){
-        data = res[0]
+        data = res[0].map(d => {
+            d.xVal = +d.xVal;
+            d.yVal = +d.yVal;
+            return d;
+        })
         setup();
     })
 }
