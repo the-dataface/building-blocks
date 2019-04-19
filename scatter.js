@@ -1,5 +1,5 @@
 //---->GLOBAL VARIABLES FOR SCATTER PLOT<-----//
-const container = d3.select('body').append('scatter-container'),
+const container = d3.select('body').append('container scatter-container'),
     svg, 
     g;
 
@@ -9,23 +9,21 @@ const outerW,
     w,
     h;
 
-const x,
-    xAccessor,
+const data,
+    x,
+    xAccessor = 'xVal',
     y,
-    yAccessor,
+    yAccessor = 'yVal',
     r,
     rAccessor;
 
-function buildScatter() {
+function build() {
     // Set up containers
     container.selectAll('*').remove();
 
-    svg = container.append('svg')
-        .attr('width', outerW)
-        .attr('height', outerH);
+    svg = container.append('svg').attr('width', outerW) .attr('height', outerH);
 
-    g = svg.append('g')
-        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    g = svg.append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     // Create voronoi group
     const gVoronoi = g.append('g')
@@ -76,19 +74,21 @@ function buildScatter() {
         .attr('class', d => 'scatter-dot')
         .attr('cx', d => x(d[xAccessor]))
         .attr('cy', d => y(d[yAccessor]))
-        .attr('r', d => r(d[rAccessor]))
+        //.attr('r', d => r(d[rAccessor]))
+        .attr('r', 3)
         .style('fill', 'blue');
 
     dots.merge(dots)
         .attr('cx', d => x(d[xAccessor]))
         .attr('cy', d => y(d[yAccessor]))
         .transition()
-        .attr('r', d => r(d[rAccessor]));
+        //.attr('r', d => r(d[rAccessor]))
+        .attr('r', 3);
 
     dots.exit().remove();
 }
 
-function setupScatter() {
+function setup() {
   outerW = container.node().offsetWidth;
   outerH = container.node().offsetHeight;
 
@@ -104,15 +104,18 @@ function setupScatter() {
 
   xExtent = d3.extent(data, d => d[xAccessor]);
   yExtent = d3.extent(data, d => d[yAccessor]);
-  rExtent = d3.extent(data, d => d[rAccessor]);
+  //rExtent = d3.extent(data, d => d[rAccessor]);
 
   x = d3.scaleLinear().rangeRound([0, w]).domain(xExtent).nice();
   y = d3.scaleLinear().rangeRound([h, 0]).domain(yExtent).nice();
-  r = d3.scaleSqrt().rangeRound([3, 10]).domain(rExtent).nice();
+  //r = d3.scaleSqrt().rangeRound([3, 10]).domain(rExtent).nice();
 
   buildScatter();
 }
 
-function initScatter() {
-  setupScatter();
+function init() {
+    d3.loadData('../assets/data/scatter.csv', function(err, res){
+        data = res[0]
+        setup();
+    })
 }
