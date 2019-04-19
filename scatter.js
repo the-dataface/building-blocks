@@ -119,3 +119,5 @@ function init() {
         setup();
     })
 }
+
+export default {init};
