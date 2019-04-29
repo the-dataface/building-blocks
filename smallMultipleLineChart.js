@@ -105,8 +105,8 @@ function setup() {
 function init() {
     d3.loadData('../assets/data/smallMultipleLineChart.csv', function(err, res){
         data = res[0].map(d => {
-            d[xAcccessor] = parseX(d[xAcccessor]);
-            d[yAcccessor] = +d[yAcccessor];
+            d[xAccessor] = parseX(d[xAccessor]);
+            d[yAccessor] = +d[yAccessor];
             return d;
         })
 
