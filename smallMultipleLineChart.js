@@ -21,7 +21,7 @@ const xAccessor = 'xVal',
     yAccessor = 'yVal';
 
 const parseX = d3.timeParse('%Y-%m-%d'),
-    formatX = d3.formatTime('%Y');
+    formatX = d3.timeFormat('%Y-%m');
 
 function build() {
     container.selectAll('*').remove();
@@ -44,6 +44,7 @@ function build() {
         .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
 
     const xAXis = d3.axisBottom(x)
+        .ticks(4)
         .tickSizeOuter(0)
         .tickFormat(d => formatX(d));
 
@@ -83,18 +84,18 @@ function setup() {
     w = outerW - margin.left - margin.right,
     h = outerH - margin.top - margin.bottom;
 
-    const xExtent = d3.extent(data, d => parseX(d[xAccessor]));
+    const xExtent = d3.extent(data, d => d[xAccessor]);
     const yExtent = d3.extent(data, d => d[yAccessor]);
 
     x = d3.scaleTime().domain(xExtent).range([0, w]),
-    y = d3.scaleLinear().domain(yExtent).range([h, 0]);
+    y = d3.scaleLinear().domain([0, yExtent[1]]).range([h, 0]);
 
     line = d3.line()
         .x(function(d) {
-            return x(d[lineXAccessor])
+            return x(d[xAccessor])
         })
         .y(function(d) {
-            return y(d[lineYAccessor])
+            return y(d[yAccessor])
         })
         .curve(d3.curveMonotoneX);
 
@@ -102,10 +103,10 @@ function setup() {
 }
 
 function init() {
-    d3.loadData('../assets/data/smallMultipleLineChartData.csv', function(err, res){
+    d3.loadData('../assets/data/smallMultipleLineChart.csv', function(err, res){
         data = res[0].map(d => {
-            d.xVal = parseX(d.xVal);
-            d.yVal = +d.yVal;
+            d[xAcccessor] = parseX(d[xAcccessor]);
+            d[yAcccessor] = +d[yAcccessor];
             return d;
         })
 
@@ -116,3 +117,5 @@ function init() {
         setup();
     })
 }
+
+export default {init};
