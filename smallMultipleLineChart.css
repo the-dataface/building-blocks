@@ -1,0 +1,6 @@
+.multiple-line-wrapper {
+    width:800px;
+    display:flex;
+    flex-wrap:row;
+    justify-content:center;
+}
