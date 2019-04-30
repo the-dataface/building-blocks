@@ -1,0 +1,25 @@
+{
+    "charts": ["scatter", "smallMultipleLineChart", "usCounty", "usState"],
+    "files": {
+        "scatter": {
+            "js": ["scatter.js"],
+            "css": ["scatter.css"],
+            "data": ["scatter.csv"]
+        },
+        "smallMultipleLineChart": {
+            "js": ["smallMultipleLineChart.js"],
+            "css": ["smallMultipleLineChart.css"],
+            "data": ["smallMultipleLineChart.csv"]
+        },
+        "usCounty": {
+            "js": ["usCounty.js"],
+            "css": ["usCounty.css"],
+            "data": ["usCounty.json"]
+        },
+        "usState": {
+            "js": ["usState.js"],
+            "css": ["usState.css"],
+            "data": ["usState.json"]
+        }
+    }
+}
