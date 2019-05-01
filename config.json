@@ -9,7 +9,7 @@
     },
     "smallMultipleLineChart": {
       "js": ["smallMultipleLineChart.js"],
-      "css": ["smallMultipleLineChart.css"],
+      "css": ["smallMultipleLineChart.scss"],
       "data": ["smallMultipleLineChart.csv"]
     },
     "usCounty": {
