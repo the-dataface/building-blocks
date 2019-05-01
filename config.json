@@ -1,5 +1,5 @@
 {
-    "charts": ["scatter", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft" , "scrollyRight"],
+    "charts": ["scatter", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft" , "scrollyRight", "bar"],
     "files": {
         "scatter": {
             "js": ["scatter.js"],
@@ -32,6 +32,11 @@
         "scrollyRight": {
             "js": ["scrollyRight.js"],
             "css": ["scrollySide.css"]
+        },
+        "bar": {
+            "js": ["bar.js"],
+            "css": ["bar.css"], 
+            "data": ["bar.csv"]
         }
     }
 }
