@@ -1,3 +1,5 @@
+const topojson = require('topojson');
+
 //---->GLOBAL VARIABLES FOR US STATE<-----//
 const container = d3.select('body').append('div').attr('class', 'map-container');
     
@@ -25,13 +27,13 @@ function build() {
     g = svg.append('g')
         .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-    g.selectAll('path')
+    g.append('g')
+        .attr('class', 'state-lines')
+        .selectAll('path')
         .data(states.features)
         .enter()
         .append('path')
-        .attr('d', path)
-        .attr('fill', 'white')
-        .attr('stroke', 'black')
+        .attr('d', path);
 
 }
 
@@ -48,23 +50,14 @@ function setup() {
 
   w = outerW - margin.left - margin.right;
   h = outerH - margin.top - margin.bottom;
-  
-  path = d3.geoPath()
-      .projection(projection);
-
-    projection = d3.geoAlbersUsa()
-      .scale(1)
-      .translate([0, 0]);
 
   getProjectionParameters();
-
   build();
 }
 
 function init() {
     d3.loadData('../assets/data/usState.json', function(err, res){
-        const topo = res[0];
-        states = topojson.feature(topo, topo.objects.states);
+        states = res[0];
         setup();
     })
 }
@@ -74,9 +67,12 @@ function getProjectionParameters() {
         .scale(1)
         .translate([0, 0]);
 
-    b = path.bounds(states),
-    s = .95 / Math.max((b[1][0] - b[0][0]) / w, (b[1][1] - b[0][1]) / h),
-    t = [(w - s * (b[1][0] + b[0][0])) / 2, (h - s * (b[1][1] + b[0][1])) / 2];
+    path = d3.geoPath()
+        .projection(projection);
+
+    const b = path.bounds(states),
+        s = .95 / Math.max((b[1][0] - b[0][0]) / w, (b[1][1] - b[0][1]) / h),
+        t = [(w - s * (b[1][0] + b[0][0])) / 2, (h - s * (b[1][1] + b[0][1])) / 2];
 
     projection
         .scale(s)

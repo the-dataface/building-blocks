@@ -3,3 +3,8 @@
     height:600px;
     max-width:95vw;
 }
+
+.map-container .county-lines{
+   fill:none;
+   stroke:black;
+}
