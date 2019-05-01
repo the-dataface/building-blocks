@@ -3,7 +3,7 @@
   "files": {
     "scatter": {
       "js": ["scatter.js"],
-      "css": ["scatter.css"],
+      "css": ["scatter.scss"],
       "html": ["scatter.hbs"],
       "data": ["scatter.csv"]
     },
