@@ -41,7 +41,7 @@ function build() {
         .attr('height', outerH);
 
     gs = svgs.append('g')
-        .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
+        .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
     const xAXis = d3.axisBottom(x)
         .ticks(4)
@@ -49,7 +49,7 @@ function build() {
         .tickFormat(d => formatX(d));
 
     gs.append('g')
-        .attr('transform', 'translate(0,' + h + ')')
+        .attr('transform', `translate(0, ${h})`)
         .attr('class', 'x axis')
         .call(xAXis);
 

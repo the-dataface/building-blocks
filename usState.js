@@ -1,5 +1,3 @@
-const topojson = require('topojson');
-
 //---->GLOBAL VARIABLES FOR US STATE<-----//
 const container = d3.select('body').append('div').attr('class', 'map-container');
     

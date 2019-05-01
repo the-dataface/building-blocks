@@ -23,9 +23,12 @@ function build() {
     // Set up containers
     container.selectAll('*').remove();
 
-    svg = container.append('svg').attr('width', outerW) .attr('height', outerH);
+    svg = container.append('svg')
+        .attr('width', outerW)
+        .attr('height', outerH);
 
-    g = svg.append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    g = svg.append('g')
+        .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
     // Create voronoi group
     const gVoronoi = g.append('g')
@@ -52,7 +55,7 @@ function build() {
     // Add axes
     const xAxis = g.append('g')
         .attr('class', 'x axis')
-        .attr('transform', 'translate(' + 0 + ',' + h + ')')
+        .attr('transform', `translate(0, ${h})`)
         .call(d3.axisBottom(x)
             .tickSize(-h)
             .tickSizeOuter(0)
@@ -109,7 +112,7 @@ function setup() {
 
   x = d3.scaleLinear().rangeRound([0, w]).domain(xExtent).nice();
   y = d3.scaleLinear().rangeRound([h, 0]).domain(yExtent).nice();
-  //r = d3.scaleSqrt().rangeRound([3, 10]).domain(rExtent).nice();
+  //r = d3.scaleSqrt().rangeRound([]).domain(rExtent).nice();
 
   build();
 }
