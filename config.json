@@ -1,42 +1,43 @@
 {
-    "charts": ["scatter", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft" , "scrollyRight", "bar"],
-    "files": {
-        "scatter": {
-            "js": ["scatter.js"],
-            "css": ["scatter.css"],
-            "data": ["scatter.csv"]
-        },
-        "smallMultipleLineChart": {
-            "js": ["smallMultipleLineChart.js"],
-            "css": ["smallMultipleLineChart.css"],
-            "data": ["smallMultipleLineChart.csv"]
-        },
-        "usCounty": {
-            "js": ["usCounty.js"],
-            "css": ["usCounty.css"],
-            "data": ["usCounty.json"]
-        },
-        "usState": {
-            "js": ["usState.js"],
-            "css": ["usState.css"],
-            "data": ["usState.json"]
-        },
-        "scrollyCenter": {
-            "js": ["scrollyCenter.js"],
-            "css": ["scrollyCenter.css"]
-        },
-        "scrollyLeft": {
-            "js": ["scrollyLeft.js"],
-            "css": ["scrollySide.css"]
-        },
-        "scrollyRight": {
-            "js": ["scrollyRight.js"],
-            "css": ["scrollySide.css"]
-        },
-        "bar": {
-            "js": ["bar.js"],
-            "css": ["bar.css"], 
-            "data": ["bar.csv"]
-        }
+  "charts": ["scatter", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "bar"],
+  "files": {
+    "scatter": {
+      "js": ["scatter.js"],
+      "css": ["scatter.css"],
+      "html": ["scatter.hbs"],
+      "data": ["scatter.csv"]
+    },
+    "smallMultipleLineChart": {
+      "js": ["smallMultipleLineChart.js"],
+      "css": ["smallMultipleLineChart.css"],
+      "data": ["smallMultipleLineChart.csv"]
+    },
+    "usCounty": {
+      "js": ["usCounty.js"],
+      "css": ["usCounty.css"],
+      "data": ["usCounty.json"]
+    },
+    "usState": {
+      "js": ["usState.js"],
+      "css": ["usState.css"],
+      "data": ["usState.json"]
+    },
+    "scrollyCenter": {
+      "js": ["scrollyCenter.js"],
+      "css": ["scrollyCenter.css"]
+    },
+    "scrollyLeft": {
+      "js": ["scrollyLeft.js"],
+      "css": ["scrollySide.css"]
+    },
+    "scrollyRight": {
+      "js": ["scrollyRight.js"],
+      "css": ["scrollySide.css"]
+    },
+    "bar": {
+      "js": ["bar.js"],
+      "css": ["bar.css"],
+      "data": ["bar.csv"]
     }
+  }
 }
