@@ -1,95 +1,95 @@
 //---->GLOBAL VARIABLES FOR SCATTER PLOT<-----//
-const container = d3.select('body').append('div').attr('class', 'scatter-container');
-    
+const container = d3.select('main').append('section').append('div').attr('class', 'scatter-container');
+
 let svg,
-    g;
+  g;
 
 let outerW,
-    outerH, 
-    margin,
-    w,
-    h;
+  outerH,
+  margin,
+  w,
+  h;
 
 let data,
-    x,
-    y,
-    r;
+  x,
+  y,
+  r;
 
 const xAccessor = 'xVal',
-    yAccessor = 'yVal';
-    //rAccessor
+  yAccessor = 'yVal';
+//rAccessor
 
 function build() {
-    // Set up containers
-    container.selectAll('*').remove();
+  // Set up containers
+  container.selectAll('*').remove();
 
-    svg = container.append('svg')
-        .attr('width', outerW)
-        .attr('height', outerH);
+  svg = container.append('svg')
+    .attr('width', outerW)
+    .attr('height', outerH);
 
-    g = svg.append('g')
-        .attr('transform', `translate(${margin.left}, ${margin.top})`);
+  g = svg.append('g')
+    .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-    // Create voronoi group
-    const gVoronoi = g.append('g')
-        .attr('class', 'voronoi');
+  // Create voronoi group
+  const gVoronoi = g.append('g')
+    .attr('class', 'voronoi');
 
-    const voronoi = d3.voronoi()
-        .x(function(d) {
-            return x(d[xAccessor]);
-        })
-        .y(function(d) {
-            return y(d[yAccessor]);
-        })
-        .extent([
-            [0, 0],
-            [w, h]
-        ]);
+  const voronoi = d3.voronoi()
+    .x(function(d) {
+      return x(d[xAccessor]);
+    })
+    .y(function(d) {
+      return y(d[yAccessor]);
+    })
+    .extent([
+      [0, 0],
+      [w, h]
+    ]);
 
-    gVoronoi.selectAll('.voronoi-path')
-        .data(voronoi(data).polygons())
-        .enter().append('path').attr('class', 'voronoi-path')
-        .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
-        .style('fill', 'rgba(0,0,0,0)');
+  gVoronoi.selectAll('.voronoi-path')
+    .data(voronoi(data).polygons())
+    .enter().append('path').attr('class', 'voronoi-path')
+    .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
+    .style('fill', 'rgba(0,0,0,0)');
 
-    // Add axes
-    const xAxis = g.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', `translate(0, ${h})`)
-        .call(d3.axisBottom(x)
-            .tickSize(-h)
-            .tickSizeOuter(0)
-            .tickPadding(10)
-        );
+  // Add axes
+  const xAxis = g.append('g')
+    .attr('class', 'x axis')
+    .attr('transform', `translate(0, ${h})`)
+    .call(d3.axisBottom(x)
+      .tickSize(-h)
+      .tickSizeOuter(0)
+      .tickPadding(10)
+    );
 
-    const yAxis = g.append('g')
-        .attr('class', 'y axis')
-        .call(d3.axisLeft(y)
-            .tickSize(-w)
-            .tickSizeOuter(0)
-            .tickPadding(5)
-        );
+  const yAxis = g.append('g')
+    .attr('class', 'y axis')
+    .call(d3.axisLeft(y)
+      .tickSize(-w)
+      .tickSizeOuter(0)
+      .tickPadding(5)
+    );
 
-    // Add scatter dots
-    const dots = g.selectAll('.scatter-dot')
-        .data(data, d => d.key);
+  // Add scatter dots
+  const dots = g.selectAll('.scatter-dot')
+    .data(data, d => d.key);
 
-    dots.enter().append('circle')
-        .attr('class', d => 'scatter-dot')
-        .attr('cx', d => x(d[xAccessor]))
-        .attr('cy', d => y(d[yAccessor]))
-        //.attr('r', d => r(d[rAccessor]))
-        .attr('r', 3)
-        .style('fill', 'blue');
+  dots.enter().append('circle')
+    .attr('class', d => 'scatter-dot')
+    .attr('cx', d => x(d[xAccessor]))
+    .attr('cy', d => y(d[yAccessor]))
+    //.attr('r', d => r(d[rAccessor]))
+    .attr('r', 3)
+    .style('fill', 'blue');
 
-    dots.merge(dots)
-        .attr('cx', d => x(d[xAccessor]))
-        .attr('cy', d => y(d[yAccessor]))
-        .transition()
-        //.attr('r', d => r(d[rAccessor]))
-        .attr('r', 3);
+  dots.merge(dots)
+    .attr('cx', d => x(d[xAccessor]))
+    .attr('cy', d => y(d[yAccessor]))
+    .transition()
+    //.attr('r', d => r(d[rAccessor]))
+    .attr('r', 3);
 
-    dots.exit().remove();
+  dots.exit().remove();
 }
 
 function setup() {
@@ -118,14 +118,16 @@ function setup() {
 }
 
 function init() {
-    d3.loadData('../assets/data/scatter.csv', function(err, res){
-        data = res[0].map(d => {
-            d.xVal = +d.xVal;
-            d.yVal = +d.yVal;
-            return d;
-        })
-        setup();
+  d3.loadData('../assets/data/scatter.csv', function(err, res) {
+    data = res[0].map(d => {
+      d.xVal = +d.xVal;
+      d.yVal = +d.yVal;
+      return d;
     })
+    setup();
+  })
 }
 
-export default {init};
+export default {
+  init
+};
