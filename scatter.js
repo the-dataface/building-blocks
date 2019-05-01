@@ -1,5 +1,5 @@
 //---->GLOBAL VARIABLES FOR SCATTER PLOT<-----//
-const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'scatter-container');
+const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide scatter-container');
 
 let svg,
   g;

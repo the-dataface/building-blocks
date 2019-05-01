@@ -1,16 +1,16 @@
 .multiple-line-wrapper {
-    width:800px;
-    margin:auto;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+  /* width:800px; */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .multiple-line-wrapper .multiple-line-container {
-    margin:0x 20px 20px 0px;
+  margin: 0x 20px 20px 0px;
 }
 
-.multiple-line-wrapper .multiple-line-container .axis text {
+/* .multiple-line-wrapper .multiple-line-container .axis text {
     font-family: 'Roboto Mono', monospace;
     fill: #666;
 }
@@ -26,4 +26,4 @@
 
 .multiple-line-wrapper .multiple-line-container .x.axis line {
     stroke: #666;
-}
+} */

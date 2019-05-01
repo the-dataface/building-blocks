@@ -1,10 +1,10 @@
 .map-container {
-    width:800px;
-    height:600px;
-    max-width:95vw;
+  /* width:800px; */
+  height: 600px;
+  /* max-width:95vw; */
 }
 
 .map-container .state-lines {
-    fill:none;
-    stroke:black;
+  fill: none;
+  stroke: black;
 }
