@@ -1,4 +1,4 @@
-.bar-container {
-    width:800px;
-    max-width:95vw;
+.bar-container .bar text {
+    fill:white;
+    font-size:12px;
 }

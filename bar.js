@@ -1,4 +1,8 @@
-const container = d3.select('body').append('div').attr('class', 'bar-container');
+const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide bar-container');
+
+let svg, 
+    g, 
+    gs;
 
 let outerW,
     outerH,
@@ -13,7 +17,7 @@ let data,
 const xAccessor = 'xVal',
     yAccessor = 'name';
 
-const barH = 20;
+const barH = 30;
 
 function build() {
     container.selectAll('*').remove();
@@ -28,9 +32,7 @@ function build() {
     // Add axes
     const xAxis = g.append('g')
         .attr('class', 'x axis')
-        .attr('transform', `translate(0, ${h})`)
-        .call(d3.axisBottom(x)
-            .tickSize(-h)
+        .call(d3.axisTop(x)
             .tickSizeOuter(0)
             .tickPadding(10)
         );
@@ -43,7 +45,7 @@ function build() {
             .tickPadding(5)
         );
 
-    const gs = g.selectAll('.bar')
+    gs = g.selectAll('.bar')
         .data(data)
         .enter()
         .append('g')
@@ -55,12 +57,14 @@ function build() {
         .attr('y', 0)
         //is this right?
         .attr('width', d => x(d[xAccessor]) - x(0))
-        .attr('height', y.bandwidth());
+        .attr('height', y.bandwidth())
+        .attr('fill', '#2d4b5c');
 
     gs.append('text')
         .attr('text-anchor', 'end')
-        .attr('x', d => x(d[xAccessor]) - 3)
+        .attr('x', d => x(d[xAccessor]) - 5)
         .attr('y', y.bandwidth() / 2)
+        .attr('dy', 4)
         .text(d => d[yAccessor]);
 
 }
@@ -70,9 +74,9 @@ function setup() {
     outerH = data.length * barH;
   
     margin = {
-      left: 10,
+      left: 100,
       right: 10,
-      top: 10,
+      top: 30,
       bottom: 10
     };
   
@@ -80,9 +84,10 @@ function setup() {
     h = outerH - margin.top - margin.bottom;
   
     const max = d3.max(data, d => d[xAccessor]);
+    const yExtent = data.map(d => d.name);
   
     x = d3.scaleLinear().rangeRound([0, w]).domain([0, max]).nice();
-    y = d3.scaleBand().rangeRound([h, 0]).domain([yExtent]).padding(0.1);
+    y = d3.scaleBand().rangeRound([h, 0]).domain(yExtent).padding(0.1);
     //r = d3.scaleSqrt().rangeRound([]).domain(rExtent).nice();
   
     build();
@@ -94,8 +99,10 @@ function init() {
             d.xVal = +d.xVal;
             return d;
         })
+        data.sort((a, b) => a[xAccessor] - b[xAccessor]);
+
         setup();
     })
 }
 
-export default { init, resize };
+export default { init };
