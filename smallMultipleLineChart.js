@@ -1,6 +1,7 @@
 //---->GLOBAL VARIABLES FOR SMALL MULTIPLE LINE CHART<-----//
-const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide multiple-line-wrapper');
+// const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide multiple-line-wrapper');
 
+const container = d3.select('.multiple-line-wrapper');
 
 let svgs,
   gs;

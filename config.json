@@ -10,33 +10,40 @@
     "smallMultipleLineChart": {
       "js": ["smallMultipleLineChart.js"],
       "css": ["smallMultipleLineChart.scss"],
+      "html": ["smallMultipleLineChart.hbs"],
       "data": ["smallMultipleLineChart.csv"]
     },
     "usCounty": {
       "js": ["usCounty.js"],
-      "css": ["usCounty.css"],
+      "css": ["usCounty.scss"],
+      "hbs": ["usCounty.hbs"],
       "data": ["usCounty.json"]
     },
     "usState": {
       "js": ["usState.js"],
-      "css": ["usState.css"],
+      "css": ["usState.scss"],
+      "hbs": ["usState.hbs"],
       "data": ["usState.json"]
     },
     "scrollyCenter": {
       "js": ["scrollyCenter.js"],
-      "css": ["scrollyCenter.css"]
+      "css": ["usState.scss"],
+      "hbs": ["scrollyCenter.hbs"]
     },
     "scrollyLeft": {
       "js": ["scrollyLeft.js"],
-      "css": ["scrollySide.css"]
+      "css": ["usState.scss"],
+      "hbs": ["scrollySide.hbs"]
     },
     "scrollyRight": {
       "js": ["scrollyRight.js"],
-      "css": ["scrollySide.css"]
+      "css": ["usState.scss"],
+      "hbs": ["scrollySide.hbs"]
     },
     "bar": {
       "js": ["bar.js"],
-      "css": ["bar.css"],
+      "css": ["bar.scss"],
+      "hbs": ["usState.hbs"],
       "data": ["bar.csv"]
     }
   }

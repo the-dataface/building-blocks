@@ -1,5 +1,7 @@
 //---->GLOBAL VARIABLES FOR US COUNTY<-----//
-const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide map-container');
+// const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide map-container');
+
+const container = d3.select('.map-container');
 
 let svg,
   g;
