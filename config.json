@@ -27,17 +27,17 @@
     },
     "scrollyCenter": {
       "js": ["scrollyCenter.js"],
-      "css": ["usState.scss"],
+      "css": ["scrollyCenter.scss"],
       "html": ["scrollyCenter.hbs"]
     },
     "scrollyLeft": {
       "js": ["scrollyLeft.js"],
-      "css": ["usState.scss"],
+      "css": ["scrollyLeft.scss"],
       "html": ["scrollySide.hbs"]
     },
     "scrollyRight": {
       "js": ["scrollyRight.js"],
-      "css": ["usState.scss"],
+      "css": ["scrollyRight.scss"],
       "html": ["scrollySide.hbs"]
     },
     "bar": {
