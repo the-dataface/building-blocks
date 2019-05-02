@@ -16,34 +16,34 @@
     "usCounty": {
       "js": ["usCounty.js"],
       "css": ["usCounty.scss"],
-      "hbs": ["usCounty.hbs"],
+      "html": ["usCounty.hbs"],
       "data": ["usCounty.json"]
     },
     "usState": {
       "js": ["usState.js"],
       "css": ["usState.scss"],
-      "hbs": ["usState.hbs"],
+      "html": ["usState.hbs"],
       "data": ["usState.json"]
     },
     "scrollyCenter": {
       "js": ["scrollyCenter.js"],
       "css": ["usState.scss"],
-      "hbs": ["scrollyCenter.hbs"]
+      "html": ["scrollyCenter.hbs"]
     },
     "scrollyLeft": {
       "js": ["scrollyLeft.js"],
       "css": ["usState.scss"],
-      "hbs": ["scrollySide.hbs"]
+      "html": ["scrollySide.hbs"]
     },
     "scrollyRight": {
       "js": ["scrollyRight.js"],
       "css": ["usState.scss"],
-      "hbs": ["scrollySide.hbs"]
+      "html": ["scrollySide.hbs"]
     },
     "bar": {
       "js": ["bar.js"],
       "css": ["bar.scss"],
-      "hbs": ["usState.hbs"],
+      "html": ["bar.hbs"],
       "data": ["bar.csv"]
     }
   }
