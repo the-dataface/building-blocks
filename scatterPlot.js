@@ -1,6 +1,5 @@
 //---->GLOBAL VARIABLES FOR SCATTER PLOT<-----//
 // const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide scatter-container');
-
 const container = d3.select('.scatter-container');
 
 let svg,
@@ -37,15 +36,11 @@ function build() {
     .attr('class', 'voronoi');
 
   const voronoi = d3.voronoi()
-    .x(function(d) {
-      return x(d[xAccessor]);
-    })
-    .y(function(d) {
-      return y(d[yAccessor]);
-    })
+    .x(d => x(d[xAccessor]))
+    .y(d => y(d[yAccessor]))
     .extent([
-      [0, 0],
-      [w, h]
+        [0, 0],
+        [w, h]
     ]);
 
   gVoronoi.selectAll('.voronoi-path')
@@ -77,7 +72,7 @@ function build() {
     .data(data, d => d.key);
 
   dots.enter().append('circle')
-    .attr('class', d => 'scatter-dot')
+    .attr('class', 'scatter-dot')
     .attr('cx', d => x(d[xAccessor]))
     .attr('cy', d => y(d[yAccessor]))
     //.attr('r', d => r(d[rAccessor]))

@@ -1,7 +1,7 @@
 {
-  "charts": ["scatter", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "bar"],
+  "charts": ["scatterPlot", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
   "files": {
-    "scatter": {
+    "scatterPlot": {
       "js": ["scatter.js"],
       "css": ["scatter.scss"],
       "html": ["scatter.hbs"],
@@ -40,11 +40,23 @@
       "css": ["scrollySide.scss"],
       "html": ["scrollyRight.hbs"]
     },
-    "bar": {
-      "js": ["bar.js"],
-      "css": ["bar.scss"],
-      "html": ["bar.hbs"],
-      "data": ["bar.csv"]
+    "horizontalBarChart": {
+      "js": ["horizontalBarChart.js"],
+      "css": ["horizontalBarChart.scss"],
+      "html": ["horizontalBarChart.hbs"],
+      "data": ["horizontalBarChart.csv"]
+    },
+    "lineChart": {
+      "js": ["lineChart.js"],
+      "css": ["lineChart.scss"],
+      "html": ["lineChart.hbs"],
+      "data": ["lineChart.csv"]
+    },
+    "beeswarm": {
+      "js": ["beeswarm.js"],
+      "css": ["beeswarm.scss"],
+      "html": ["beeswarm.hbs"],
+      "data": ["beeswarm.csv"]
     }
   }
 }
