@@ -1,9 +1,9 @@
 
 //---->GLOBAL VARIABLES FOR LINE CHART<-----//
-const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide line-container');
+const container = d3.select('.line-container');
 
-let svgs,
-  gs;
+let svg,
+  g;
 
 let outerW,
   outerH,
@@ -56,7 +56,7 @@ function build() {
     .data(nested)
     .enter()
     .append('path')
-    .attr('d', line)
+    .attr('d', d => line(d.values))
     .attr('fill', 'none')
     .attr('stroke', 'black')
     .style('stroke-width', 2)
@@ -64,8 +64,8 @@ function build() {
 }
 
 function setup() {
-  outerW = 200,
-    outerH = 170;
+  outerW = container.node().offsetWidth,
+  outerH = container.node().offsetHeight;
 
   margin = {
     left: 20,
@@ -75,7 +75,7 @@ function setup() {
   };
 
   w = outerW - margin.left - margin.right,
-    h = outerH - margin.top - margin.bottom;
+  h = outerH - margin.top - margin.bottom;
 
   const xExtent = d3.extent(data, d => d[xAccessor]);
   const yExtent = d3.extent(data, d => d[yAccessor]);
