@@ -96,7 +96,7 @@ function setup() {
 }
 
 function init() {
-  d3.loadData('../assets/data/bar.csv', function(err, res) {
+  d3.loadData('../assets/data/horizontalBarChart.csv', function(err, res) {
     data = res[0].map(d => {
       d.xVal = +d.xVal;
       return d;

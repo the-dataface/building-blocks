@@ -115,7 +115,7 @@ function setup() {
 }
 
 function init() {
-  d3.loadData('../assets/data/scatter.csv', function(err, res) {
+  d3.loadData('../assets/data/scatterPlot.csv', function(err, res) {
     data = res[0].map(d => {
       d.xVal = +d.xVal;
       d.yVal = +d.yVal;
