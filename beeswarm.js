@@ -29,6 +29,25 @@ function build() {
     g = svg.append('g')
         .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
+    // Add axes
+    const xAxis = g.append('g')
+      .attr('class', 'x axis')
+      .attr('transform', `translate(0, ${h})`)
+      .call(d3.axisTop(x)
+        .tickSize(h)
+        .tickSizeOuter(0)
+        .tickPadding(10)
+      );
+
+    const yAxis = g.append('g')
+      .attr('class', 'y axis');
+
+    yAxis.append('line')
+      .attr('x1', 10)
+      .attr('x2', 0)
+      .attr('y1', h / 2)
+      .attr('y2', h / 2);
+
     const simulation = d3.forceSimulation(data)
         .force("x", d3.forceX(d => x(d[xAccessor])))
         .force("y", d3.forceY(h / 2).strength(1))
@@ -42,8 +61,8 @@ function build() {
         .attr('class', 'voronoi');
 
     const voronoi = d3.voronoi()
-        .x(d => x(d[xAccessor]))
-        .y(d => y(d[yAccessor]))
+        .x(d => d.x)
+        .y(d => d.y)
         .extent([
             [0, 0],
             [w, h]
@@ -73,9 +92,9 @@ function setup() {
   outerH = container.node().offsetHeight;
 
   margin = {
-    left: 10,
-    right: 10,
-    top: 10,
+    left: 30,
+    right: 30,
+    top: 30,
     bottom: 10
   };
 
