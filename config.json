@@ -32,13 +32,13 @@
     },
     "scrollyLeft": {
       "js": ["scrollyLeft.js"],
-      "css": ["scrollyLeft.scss"],
-      "html": ["scrollySide.hbs"]
+      "css": ["scrollySide.scss"],
+      "html": ["scrollyLeft.hbs"]
     },
     "scrollyRight": {
       "js": ["scrollyRight.js"],
-      "css": ["scrollyRight.scss"],
-      "html": ["scrollySide.hbs"]
+      "css": ["scrollySide.scss"],
+      "html": ["scrollyRight.hbs"]
     },
     "bar": {
       "js": ["bar.js"],
