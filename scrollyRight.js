@@ -1,9 +1,9 @@
 const scrollama = require('scrollama');
 
 // using d3 for convenience
-const html = "<figure><p>0</p></figure><article><div class='step' data-step='1'><p>STEP 1</p></div><div class='step' data-step='2'><p>STEP 2</p></div><div class='step' data-step='3'> <p>STEP 3</p></div><div class='step' data-step='4'><p>STEP 4</p></div></article>";
+// const html = "<figure><p>0</p></figure><article><div class='step' data-step='1'><p>STEP 1</p></div><div class='step' data-step='2'><p>STEP 2</p></div><div class='step' data-step='3'> <p>STEP 3</p></div><div class='step' data-step='4'><p>STEP 4</p></div></article>";
 // const scrolly = d3.select('body').append('section').attr('id', 'scrolly').html(html);
-const scrolly = d3.select('#scrolly').html(html);
+const scrolly = d3.select('#scrolly');
 const figure = scrolly.select('figure');
 const article = scrolly.select('article');
 const step = article.selectAll('.step');
