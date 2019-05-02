@@ -2,10 +2,10 @@
   "charts": ["scatterPlot", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
   "files": {
     "scatterPlot": {
-      "js": ["scatter.js"],
-      "css": ["scatter.scss"],
-      "html": ["scatter.hbs"],
-      "data": ["scatter.csv"]
+      "js": ["scatterPlot.js"],
+      "css": ["scatterPlot.scss"],
+      "html": ["scatterPlot.hbs"],
+      "data": ["scatterPlot.csv"]
     },
     "smallMultipleLineChart": {
       "js": ["smallMultipleLineChart.js"],
