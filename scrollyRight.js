@@ -10,7 +10,7 @@ const step = article.selectAll('.step');
 // initialize the scrollama
 const scroller = scrollama();
 // generic window resize listener event
-function handleResize() {
+export function handleResize() {
   // 1. update height of step elements
   const stepH = Math.floor(window.innerHeight * 0.85);
   step.style('height', stepH + 'px');
@@ -37,7 +37,7 @@ function setupStickyfill() {
   });
 }
 
-function init() {
+export function init() {
   setupStickyfill();
   // 1. force a resize on load to ensure proper dimensions are sent to scrollama
   handleResize();
@@ -51,9 +51,9 @@ function init() {
     })
     .onStepEnter(handleStepEnter)
   // setup resize event
-  window.addEventListener('resize', handleResize);
+  // window.addEventListener('resize', handleResize);
 }
 
-export default {
-  init
-};
+// export default {
+//   init
+// };
