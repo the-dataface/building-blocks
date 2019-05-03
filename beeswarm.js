@@ -108,7 +108,7 @@ function mouseout() {
   tooltip.style('display', 'none')
 }
 
-function setup() {
+export function setup() {
   outerW = container.node().offsetWidth;
   outerH = container.node().offsetHeight;
 
@@ -131,7 +131,7 @@ function setup() {
   build();
 }
 
-function init() {
+export function init() {
   d3.loadData('../assets/data/beeswarm.csv', function(err, res) {
     data = res[0].map(d => {
       d.xVal = +d.xVal;
@@ -141,6 +141,6 @@ function init() {
   })
 }
 
-export default {
-  init
-};
+// export default {
+//   init
+// };

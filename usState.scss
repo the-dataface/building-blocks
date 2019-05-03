@@ -1,19 +1,17 @@
 @import '_variables';
 
 .map-container {
-  /* width:800px; */
   height: 600px;
-  /* max-width:95vw; */
 }
 
 .map-container .state-lines {
-  fill: $dark;
-  stroke: white;
+  fill: $mapcolorDark;
+  stroke: $mapcolorLight;
 }
 
 .dark {
   .map-container .state-lines {
-    fill: white;
-    stroke: $dark;
+    fill: $mapcolorLight;
+    stroke: $mapcolorDark;
   }
 }

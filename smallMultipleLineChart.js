@@ -72,7 +72,7 @@ function build() {
 
 }
 
-function setup() {
+export function setup() {
   outerW = 200,
     outerH = 170;
 
@@ -104,7 +104,7 @@ function setup() {
   build();
 }
 
-function init() {
+export function init() {
   d3.loadData('../assets/data/smallMultipleLineChart.csv', function(err, res) {
     data = res[0].map(d => {
       d[xAccessor] = parseX(d[xAccessor]);
@@ -119,7 +119,3 @@ function init() {
     setup();
   })
 }
-
-export default {
-  init
-};

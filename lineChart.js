@@ -110,7 +110,7 @@ function mouseout() {
   g.selectAll('.focus').remove();
 }
 
-function setup() {
+export function setup() {
   outerW = container.node().offsetWidth,
     outerH = container.node().offsetHeight;
 
@@ -142,7 +142,7 @@ function setup() {
   build();
 }
 
-function init() {
+export function init() {
   d3.loadData('../assets/data/lineChart.csv', function(err, res) {
     data = res[0].map(d => {
       d[xAccessor] = parseX(d[xAccessor]);
@@ -157,7 +157,3 @@ function init() {
     setup();
   })
 }
-
-export default {
-  init
-};

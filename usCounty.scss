@@ -5,13 +5,13 @@
 }
 
 .map-container .country-lines {
-  fill: $dark;
-  stroke: white;
+  fill: $mapcolorDark;
+  stroke: $mapcolorLight;
 }
 
 .dark {
   .map-container .country-lines {
-    fill: white;
-    stroke: $dark;
+    fill: $mapcolorLight;
+    stroke: $mapcolorDark;
   }
 }

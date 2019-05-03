@@ -56,7 +56,7 @@ function mouseout() {
   tooltip.style('display', 'none')
 }
 
-function setup() {
+export function setup() {
   outerW = container.node().offsetWidth;
   outerH = container.node().offsetHeight;
 
@@ -74,7 +74,7 @@ function setup() {
   build();
 }
 
-function init() {
+export function init() {
   d3.loadData('../assets/data/usState.json', function(err, res) {
     states = res[0];
     setup();
@@ -98,6 +98,6 @@ function getProjectionParameters() {
     .translate(t);
 }
 
-export default {
-  init
-};
+// export default {
+//   init
+// };
