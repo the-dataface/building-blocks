@@ -77,7 +77,7 @@ function build() {
 
 function mousemove(d) {
 
-  var xPos = d3.mouse(svg.node())[0],
+  const xPos = d3.mouse(svg.node())[0],
     yPos = d3.mouse(svg.node())[1];
 
   tooltip.style('display', 'block')

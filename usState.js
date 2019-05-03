@@ -44,7 +44,7 @@ function build() {
 function mousemove(d) {
   d = d.properties;
 
-  var x = d3.mouse(svg.node())[0],
+  const x = d3.mouse(svg.node())[0],
     y = d3.mouse(svg.node())[1];
 
   tooltip.style('display', 'block')
