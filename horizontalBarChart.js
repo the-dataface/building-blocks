@@ -1,10 +1,12 @@
-// const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide bar-container');
+import * as lib from "./utilities.js";
 
 const container = d3.select('.bar-container');
 
 let svg,
   g,
   gs;
+
+let tooltip = container.select('.tooltip');
 
 let outerW,
   outerH,
@@ -22,7 +24,7 @@ const xAccessor = 'xVal',
 const barH = 30;
 
 function build() {
-  container.selectAll('*').remove();
+  container.selectAll('*:not(.tooltip)').remove();
 
   svg = container.append('svg')
     .attr('width', outerW)
@@ -42,7 +44,7 @@ function build() {
   const yAxis = g.append('g')
     .attr('class', 'y axis')
     .call(d3.axisLeft(y)
-      .tickSize(-w)
+      .tickSize(0)
       .tickSizeOuter(0)
       .tickPadding(5)
     );
@@ -60,15 +62,31 @@ function build() {
     //is this right?
     .attr('width', d => x(d[xAccessor]) - x(0))
     .attr('height', y.bandwidth())
-    .attr('fill', '#2d4b5c');
+    .attr('fill', '#2d4b5c')
+    .on('mousemove', mousemove)
+    .on('mouseout', mouseout);
 
   gs.append('text')
     .attr('text-anchor', 'end')
     .attr('x', d => x(d[xAccessor]) - 5)
     .attr('y', y.bandwidth() / 2)
     .attr('dy', 4)
-    .text(d => d[yAccessor]);
+    .text(d => d[yAccessor])
+    .style('pointer-events', 'none');
+}
 
+function mousemove(d) {
+
+  var xPos = d3.mouse(svg.node())[0],
+    yPos = d3.mouse(svg.node())[1];
+
+  tooltip.style('display', 'block')
+    .style('transform', lib.tooltipPosition(w, margin, xPos, yPos))
+    .html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d.xVal}`);
+}
+
+function mouseout() {
+  tooltip.style('display', 'none');
 }
 
 function setup() {

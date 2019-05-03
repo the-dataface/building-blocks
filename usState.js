@@ -1,10 +1,12 @@
-//---->GLOBAL VARIABLES FOR US STATE<-----//
-// const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide map-container');
+import * as lib from "./utilities.js";
 
+//---->GLOBAL VARIABLES FOR US STATE<-----//
 const container = d3.select('.map-container');
 
 let svg,
   g;
+
+let tooltip = container.select('.tooltip');
 
 let outerW,
   outerH,
@@ -18,7 +20,7 @@ let states,
 
 function build() {
   // Set up containers
-  container.selectAll('*').remove();
+  container.selectAll('*:not(.tooltip)').remove();
 
   svg = container.append('svg')
     .attr('width', outerW)
@@ -33,8 +35,25 @@ function build() {
     .data(states.features)
     .enter()
     .append('path')
-    .attr('d', path);
+    .attr('d', path)
+    .on('mousemove', mousemove)
+    .on('mouseout', mouseout);
 
+}
+
+function mousemove(d) {
+  d = d.properties;
+
+  var x = d3.mouse(svg.node())[0],
+    y = d3.mouse(svg.node())[1];
+
+  tooltip.style('display', 'block')
+    .style('transform', lib.tooltipPosition(w, margin, x, y))
+    .html(`<h6>${d.NAME}</h6>`);
+}
+
+function mouseout() {
+  tooltip.style('display', 'none')
 }
 
 function setup() {

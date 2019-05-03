@@ -1,9 +1,12 @@
+import * as lib from "./utilities.js";
 
 //---->GLOBAL VARIABLES FOR LINE CHART<-----//
 const container = d3.select('.line-container');
 
 let svg,
   g;
+
+let tooltip = container.select('.tooltip');
 
 let outerW,
   outerH,
@@ -25,7 +28,7 @@ const parseX = d3.timeParse('%Y-%m-%d'),
   formatX = d3.timeFormat('%Y-%m');
 
 function build() {
-  container.selectAll('*').remove();
+  container.selectAll('*:not(.tooltip)').remove();
 
   svg = container.append('svg')
     .attr('width', outerW)
@@ -52,20 +55,64 @@ function build() {
     .attr('class', 'y axis')
     .call(yAxis);
 
-  g.selectAll('path')
+  // Create voronoi group
+  const gVoronoi = g.append('g')
+    .attr('class', 'voronoi');
+
+  const voronoi = d3.voronoi()
+    .x(d => x(d[xAccessor]))
+    .y(d => y(d[yAccessor]))
+    .extent([
+      [0, 0],
+      [w, h]
+    ]);
+
+  gVoronoi.selectAll('.voronoi-path')
+    .data(voronoi.polygons(d3.merge(nested.map(function(d) {
+      return d.values;
+    }))))
+    .enter().append('path').attr('class', 'voronoi-path')
+    .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
+    .style('fill', 'rgba(0,0,0,0)')
+    .on('mouseover', mouseover)
+    .on('mouseout', mouseout);
+
+  g.selectAll('.line-path')
     .data(nested)
     .enter()
     .append('path')
+    .attr('class', 'line-path')
     .attr('d', d => line(d.values))
     .attr('fill', 'none')
     .attr('stroke', 'black')
     .style('stroke-width', 2)
+    .style('pointer-events', 'none');
+}
 
+function mouseover(d) {
+  d = d.data;
+
+  tooltip.style('display', 'block')
+    .style('top', margin.top + 'px')
+    .style('left', margin.left + 'px')
+    .style('transform', lib.tooltipPosition(w, margin, x(d.xVal), y(d.yVal)))
+    .html(`<h6>${d.name}</h6><p><strong>Date</strong>: ${formatX(d.xVal)}<br><strong>Value</strong>: ${d.yVal}`);
+
+  g.append('circle')
+    .attr('class', 'focus')
+    .attr('r', 3)
+    .attr('transform', `translate(${x(d.xVal)}, ${y(d.yVal)})`)
+    .style('pointer-events', 'none');
+}
+
+function mouseout() {
+  tooltip.style('display', 'none')
+  g.selectAll('.focus').remove();
 }
 
 function setup() {
   outerW = container.node().offsetWidth,
-  outerH = container.node().offsetHeight;
+    outerH = container.node().offsetHeight;
 
   margin = {
     left: 20,
@@ -75,7 +122,7 @@ function setup() {
   };
 
   w = outerW - margin.left - margin.right,
-  h = outerH - margin.top - margin.bottom;
+    h = outerH - margin.top - margin.bottom;
 
   const xExtent = d3.extent(data, d => d[xAccessor]);
   const yExtent = d3.extent(data, d => d[yAccessor]);

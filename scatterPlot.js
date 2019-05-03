@@ -1,9 +1,12 @@
+import * as lib from "./utilities.js";
+
 //---->GLOBAL VARIABLES FOR SCATTER PLOT<-----//
-// const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide scatter-container');
 const container = d3.select('.scatter-container');
 
 let svg,
   g;
+
+let tooltip = container.select('.tooltip');
 
 let outerW,
   outerH,
@@ -22,7 +25,7 @@ const xAccessor = 'xVal',
 
 function build() {
   // Set up containers
-  container.selectAll('*').remove();
+  container.selectAll('*:not(.tooltip)').remove();
 
   svg = container.append('svg')
     .attr('width', outerW)
@@ -30,24 +33,6 @@ function build() {
 
   g = svg.append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
-
-  // Create voronoi group
-  const gVoronoi = g.append('g')
-    .attr('class', 'voronoi');
-
-  const voronoi = d3.voronoi()
-    .x(d => x(d[xAccessor]))
-    .y(d => y(d[yAccessor]))
-    .extent([
-        [0, 0],
-        [w, h]
-    ]);
-
-  gVoronoi.selectAll('.voronoi-path')
-    .data(voronoi(data).polygons())
-    .enter().append('path').attr('class', 'voronoi-path')
-    .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
-    .style('fill', 'rgba(0,0,0,0)');
 
   // Add axes
   const xAxis = g.append('g')
@@ -67,6 +52,26 @@ function build() {
       .tickPadding(5)
     );
 
+  // Create voronoi group
+  const gVoronoi = g.append('g')
+    .attr('class', 'voronoi');
+
+  const voronoi = d3.voronoi()
+    .x(d => x(d[xAccessor]))
+    .y(d => y(d[yAccessor]))
+    .extent([
+      [0, 0],
+      [w, h]
+    ]);
+
+  gVoronoi.selectAll('.voronoi-path')
+    .data(voronoi(data).polygons())
+    .enter().append('path').attr('class', 'voronoi-path')
+    .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
+    .style('fill', 'rgba(0,0,0,0)')
+    .on('mouseover', mouseover)
+    .on('mouseout', mouseout);
+
   // Add scatter dots
   const dots = g.selectAll('.scatter-dot')
     .data(data, d => d.key);
@@ -77,7 +82,8 @@ function build() {
     .attr('cy', d => y(d[yAccessor]))
     //.attr('r', d => r(d[rAccessor]))
     .attr('r', 3)
-    .style('fill', 'blue');
+    .style('fill', 'blue')
+    .style('pointer-events', 'none');
 
   dots.merge(dots)
     .attr('cx', d => x(d[xAccessor]))
@@ -87,6 +93,20 @@ function build() {
     .attr('r', 3);
 
   dots.exit().remove();
+}
+
+function mouseover(d) {
+  d = d.data;
+
+  tooltip.style('display', 'block')
+    .style('top', margin.top + 'px')
+    .style('left', margin.left + 'px')
+    .style('transform', lib.tooltipPosition(w, margin, x(d.xVal), y(d.yVal)))
+    .html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d.xVal.toFixed(2)}<br><strong>y</strong>: ${d.yVal.toFixed(2)}`);
+}
+
+function mouseout() {
+  tooltip.style('display', 'none')
 }
 
 function setup() {

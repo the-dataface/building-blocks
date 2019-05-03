@@ -1,8 +1,12 @@
+import * as lib from "./utilities.js";
+
 //---->GLOBAL VARIABLES FOR BEESWARM<-----//
 const container = d3.select('.beeswarm-container');
 
 let svg,
   g;
+
+let tooltip = container.select('.tooltip');
 
 let outerW,
   outerH,
@@ -16,75 +20,92 @@ let data,
   r;
 
 const xAccessor = 'xVal',
-    rAccessor = 'rVal';
+  rAccessor = 'rVal';
 
 function build() {
-    // Set up containers
-    container.selectAll('*').remove();
+  // Set up containers
+  container.selectAll('*:not(.tooltip)').remove();
 
-    svg = container.append('svg')
-        .attr('width', outerW)
-        .attr('height', outerH);
+  svg = container.append('svg')
+    .attr('width', outerW)
+    .attr('height', outerH);
 
-    g = svg.append('g')
-        .attr('transform', `translate(${margin.left}, ${margin.top})`);
+  g = svg.append('g')
+    .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-    // Add axes
-    const xAxis = g.append('g')
-      .attr('class', 'x axis')
-      .attr('transform', `translate(0, ${h})`)
-      .call(d3.axisTop(x)
-        .tickSize(h)
-        .tickSizeOuter(0)
-        .tickPadding(10)
-      );
+  // Add axes
+  const xAxis = g.append('g')
+    .attr('class', 'x axis')
+    .attr('transform', `translate(0, ${h})`)
+    .call(d3.axisTop(x)
+      .tickSize(h)
+      .tickSizeOuter(0)
+      .tickPadding(10)
+    );
 
-    const yAxis = g.append('g')
-      .attr('class', 'y axis');
+  const yAxis = g.append('g')
+    .attr('class', 'y axis');
 
-    yAxis.append('line')
-      .attr('x1', 10)
-      .attr('x2', 0)
-      .attr('y1', h / 2)
-      .attr('y2', h / 2);
+  yAxis.append('line')
+    .attr('x1', 10)
+    .attr('x2', 0)
+    .attr('y1', h / 2)
+    .attr('y2', h / 2);
 
-    const simulation = d3.forceSimulation(data)
-        .force("x", d3.forceX(d => x(d[xAccessor])))
-        .force("y", d3.forceY(h / 2).strength(1))
-        .force("collide", d3.forceCollide(d => r(d[rAccessor]) * 1.05))
-        .stop();
+  const simulation = d3.forceSimulation(data)
+    .force("x", d3.forceX(d => x(d[xAccessor])))
+    .force("y", d3.forceY(h / 2).strength(1))
+    .force("collide", d3.forceCollide(d => r(d[rAccessor]) * 1.05))
+    .stop();
 
-    for (let i = 0; i < 200; ++i) simulation.tick();
+  for (let i = 0; i < 200; ++i) simulation.tick();
 
-    // Create voronoi group
-    const gVoronoi = g.append('g')
-        .attr('class', 'voronoi');
+  // Create voronoi group
+  const gVoronoi = g.append('g')
+    .attr('class', 'voronoi');
 
-    const voronoi = d3.voronoi()
-        .x(d => d.x)
-        .y(d => d.y)
-        .extent([
-            [0, 0],
-            [w, h]
-        ]);
+  const voronoi = d3.voronoi()
+    .x(d => d.x)
+    .y(d => d.y)
+    .extent([
+      [0, 0],
+      [w, h]
+    ]);
 
-    gVoronoi.selectAll('.voronoi-path')
-        .data(voronoi(data).polygons())
-        .enter().append('path').attr('class', 'voronoi-path')
-        .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
-        .style('fill', 'rgba(0,0,0,0)');
+  gVoronoi.selectAll('.voronoi-path')
+    .data(voronoi(data).polygons())
+    .enter().append('path').attr('class', 'voronoi-path')
+    .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
+    .style('fill', 'rgba(0,0,0,0)')
+    .on('mouseover', mouseover)
+    .on('mouseout', mouseout);
 
-    //Create circles
-    const dots = g.selectAll('.swarm-dot')
-        .data(data, d => d.key)
-        .enter()
-        .append('circle')
-        .attr('class', 'swarm-dot')
-        .attr('cx', d => d.x)
-        .attr('cy', d => d.y)
-        .attr('r', d => r(d[rAccessor]))
-        .style('fill', '#2d4b5c');
+  //Create circles
+  const dots = g.selectAll('.swarm-dot')
+    .data(data, d => d.key)
+    .enter()
+    .append('circle')
+    .attr('class', 'swarm-dot')
+    .attr('cx', d => d.x)
+    .attr('cy', d => d.y)
+    .attr('r', d => r(d[rAccessor]))
+    .style('fill', '#2d4b5c')
+    .style('pointer-events', 'none');
 
+}
+
+function mouseover(d) {
+  d = d.data;
+
+  tooltip.style('display', 'block')
+    .style('top', margin.top + 'px')
+    .style('left', margin.left + 'px')
+    .style('transform', lib.tooltipPosition(w, margin, d.x, d.y))
+    .html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d.xVal}<br><strong>y</strong>: ${d.yVal}`);
+}
+
+function mouseout() {
+  tooltip.style('display', 'none')
 }
 
 function setup() {
