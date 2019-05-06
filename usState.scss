@@ -6,12 +6,12 @@
 
 .map-container .state-lines {
   fill: $mapcolorDark;
-  stroke: $mapcolorLight;
+  stroke: #fff;
 }
 
 .dark {
   .map-container .state-lines {
     fill: $mapcolorLight;
-    stroke: $mapcolorDark;
+    stroke: $dark;
   }
 }

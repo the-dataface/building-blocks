@@ -6,12 +6,12 @@
 
 .map-container .country-lines {
   fill: $mapcolorDark;
-  stroke: $mapcolorLight;
+  stroke: #fff;
 }
 
 .dark {
   .map-container .country-lines {
     fill: $mapcolorLight;
-    stroke: $mapcolorDark;
+    stroke: $dark;
   }
 }
