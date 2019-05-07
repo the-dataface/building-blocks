@@ -63,7 +63,6 @@ function build() {
     //is this right?
     .attr('width', d => x(d[xAccessor]) - x(0))
     .attr('height', y.bandwidth())
-    .attr('fill', '#2d4b5c')
     .on('mousemove', mousemove)
     .on('mouseout', mouseout);
 

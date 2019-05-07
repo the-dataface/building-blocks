@@ -74,7 +74,6 @@ function build() {
     }))))
     .enter().append('path').attr('class', 'voronoi-path')
     .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
-    .style('fill', 'rgba(0,0,0,0)')
     .on('mouseover', mouseover)
     .on('mouseout', mouseout);
 
@@ -85,7 +84,6 @@ function build() {
     .attr('class', 'line-path')
     .attr('d', d => line(d.values))
     .attr('fill', 'none')
-    .attr('stroke', 'black')
     .style('stroke-width', 2)
     .style('pointer-events', 'none');
 }

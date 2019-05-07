@@ -68,7 +68,6 @@ function build() {
     .datum(d => d.values)
     .attr('d', line)
     .attr('fill', 'none')
-    .attr('stroke', 'black')
     .style('stroke-width', 2)
 
 }

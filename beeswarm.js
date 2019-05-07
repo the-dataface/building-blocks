@@ -77,7 +77,6 @@ function build() {
     .data(voronoi(data).polygons())
     .enter().append('path').attr('class', 'voronoi-path')
     .attr('d', d => d ? 'M' + d.join('L') + 'Z' : null)
-    .style('fill', 'rgba(0,0,0,0)')
     .on('mouseover', mouseover)
     .on('mouseout', mouseout);
 
@@ -90,7 +89,6 @@ function build() {
     .attr('cx', d => d.x)
     .attr('cy', d => d.y)
     .attr('r', d => r(d[rAccessor]))
-    .style('fill', '#2d4b5c')
     .style('pointer-events', 'none');
 
 }
