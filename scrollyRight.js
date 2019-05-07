@@ -1,3 +1,6 @@
+import * as util from "./utilities.js";
+import * as globals from './_globals.js';
+
 const scrollama = require('scrollama');
 
 // using d3 for convenience

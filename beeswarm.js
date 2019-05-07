@@ -1,4 +1,5 @@
-import * as lib from "./utilities.js";
+import * as util from "./utilities.js";
+import * as globals from './_globals.js';
 
 //---->GLOBAL VARIABLES FOR BEESWARM<-----//
 const container = d3.select('.beeswarm-container');
@@ -100,7 +101,7 @@ function mouseover(d) {
   tooltip.style('display', 'block')
     .style('top', margin.top + 'px')
     .style('left', margin.left + 'px')
-    .style('transform', lib.tooltipPosition(w, margin, d.x, d.y))
+    .style('transform', util.tooltipPosition(w, margin, d.x, d.y))
     .html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d.xVal}<br><strong>y</strong>: ${d.yVal}`);
 }
 
@@ -132,7 +133,7 @@ export function setup() {
 }
 
 export function init() {
-  d3.loadData('../assets/data/beeswarm.csv', function(err, res) {
+  d3.loadData('./assets/data/beeswarm.csv', function(err, res) {
     data = res[0].map(d => {
       d.xVal = +d.xVal;
       return d;

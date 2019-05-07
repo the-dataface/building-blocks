@@ -1,4 +1,5 @@
-import * as lib from "./utilities.js";
+import * as util from "./utilities.js";
+import * as globals from './_globals.js';
 
 //---->GLOBAL VARIABLES FOR SCATTER PLOT<-----//
 const container = d3.select('.scatter-container');
@@ -101,7 +102,7 @@ function mouseover(d) {
   tooltip.style('display', 'block')
     .style('top', margin.top + 'px')
     .style('left', margin.left + 'px')
-    .style('transform', lib.tooltipPosition(w, margin, x(d.xVal), y(d.yVal)))
+    .style('transform', util.tooltipPosition(w, margin, x(d.xVal), y(d.yVal)))
     .html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d.xVal.toFixed(2)}<br><strong>y</strong>: ${d.yVal.toFixed(2)}`);
 }
 
@@ -135,7 +136,7 @@ export function setup() {
 }
 
 export function init() {
-  d3.loadData('../assets/data/scatterPlot.csv', function(err, res) {
+  d3.loadData('./assets/data/scatterPlot.csv', function(err, res) {
     data = res[0].map(d => {
       d.xVal = +d.xVal;
       d.yVal = +d.yVal;

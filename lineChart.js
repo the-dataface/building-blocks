@@ -1,4 +1,5 @@
-import * as lib from "./utilities.js";
+import * as util from "./utilities.js";
+import * as globals from './_globals.js';
 
 //---->GLOBAL VARIABLES FOR LINE CHART<-----//
 const container = d3.select('.line-container');
@@ -95,7 +96,7 @@ function mouseover(d) {
   tooltip.style('display', 'block')
     .style('top', margin.top + 'px')
     .style('left', margin.left + 'px')
-    .style('transform', lib.tooltipPosition(w, margin, x(d.xVal), y(d.yVal)))
+    .style('transform', util.tooltipPosition(w, margin, x(d.xVal), y(d.yVal)))
     .html(`<h6>${d.name}</h6><p><strong>Date</strong>: ${formatX(d.xVal)}<br><strong>Value</strong>: ${d.yVal}`);
 
   g.append('circle')
@@ -143,7 +144,7 @@ export function setup() {
 }
 
 export function init() {
-  d3.loadData('../assets/data/lineChart.csv', function(err, res) {
+  d3.loadData('./assets/data/lineChart.csv', function(err, res) {
     data = res[0].map(d => {
       d[xAccessor] = parseX(d[xAccessor]);
       d[yAccessor] = +d[yAccessor];

@@ -1,6 +1,7 @@
-//---->GLOBAL VARIABLES FOR SMALL MULTIPLE LINE CHART<-----//
-// const container = d3.select('main').append('section').append('div').attr('class', 'wrapper').append('div').attr('class', 'chart-wide multiple-line-wrapper');
+import * as util from "./utilities.js";
+import * as globals from './_globals.js';
 
+//---->GLOBAL VARIABLES FOR SMALL MULTIPLE LINE CHART<-----//
 const container = d3.select('.multiple-line-wrapper');
 
 let svgs,
@@ -105,7 +106,7 @@ export function setup() {
 }
 
 export function init() {
-  d3.loadData('../assets/data/smallMultipleLineChart.csv', function(err, res) {
+  d3.loadData('./assets/data/smallMultipleLineChart.csv', function(err, res) {
     data = res[0].map(d => {
       d[xAccessor] = parseX(d[xAccessor]);
       d[yAccessor] = +d[yAccessor];

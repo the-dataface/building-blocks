@@ -1,4 +1,5 @@
-import * as lib from "./utilities.js";
+import * as util from "./utilities.js";
+import * as globals from './_globals.js';
 
 //---->GLOBAL VARIABLES FOR US STATE<-----//
 const container = d3.select('.map-container');
@@ -48,7 +49,7 @@ function mousemove(d) {
     y = d3.mouse(svg.node())[1];
 
   tooltip.style('display', 'block')
-    .style('transform', lib.tooltipPosition(w, margin, x, y))
+    .style('transform', util.tooltipPosition(w, margin, x, y))
     .html(`<h6>${d.NAME}</h6>`);
 }
 
@@ -75,7 +76,7 @@ export function setup() {
 }
 
 export function init() {
-  d3.loadData('../assets/data/usState.json', function(err, res) {
+  d3.loadData('./assets/data/usState.json', function(err, res) {
     states = res[0];
     setup();
   })

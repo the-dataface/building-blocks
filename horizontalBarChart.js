@@ -1,4 +1,5 @@
-import * as lib from "./utilities.js";
+import * as util from "./utilities.js";
+import * as globals from './_globals.js';
 
 const container = d3.select('.bar-container');
 
@@ -81,7 +82,7 @@ function mousemove(d) {
     yPos = d3.mouse(svg.node())[1];
 
   tooltip.style('display', 'block')
-    .style('transform', lib.tooltipPosition(w, margin, xPos, yPos))
+    .style('transform', util.tooltipPosition(w, margin, xPos, yPos))
     .html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d.xVal}`);
 }
 
@@ -114,7 +115,7 @@ export function setup() {
 }
 
 export function init() {
-  d3.loadData('../assets/data/horizontalBarChart.csv', function(err, res) {
+  d3.loadData('./assets/data/horizontalBarChart.csv', function(err, res) {
     data = res[0].map(d => {
       d.xVal = +d.xVal;
       return d;
