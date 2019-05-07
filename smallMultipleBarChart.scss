@@ -1,0 +1,13 @@
+@import '_variables';
+
+.multiple-bar-line-wrapper {
+  /* width:800px; */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .multiple-line-container {
+    margin: 0 20px 20px 0;
+  }
+}

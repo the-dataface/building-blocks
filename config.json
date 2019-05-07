@@ -13,6 +13,12 @@
       "html": ["smallMultipleLineChart.hbs"],
       "data": ["smallMultipleLineChart.csv"]
     },
+    "smallMultipleBarChart": {
+      "js": ["smallMultipleBarChart.js"],
+      "css": ["smallMultipleBarChart.scss"],
+      "html": ["smallMultipleBarChart.hbs"],
+      "data": ["smallMultipleBarChart.csv"]
+    },
     "usCounty": {
       "js": ["usCounty.js"],
       "css": ["usCounty.scss"],
