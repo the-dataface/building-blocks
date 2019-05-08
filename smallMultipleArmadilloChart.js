@@ -58,12 +58,12 @@ function build() {
     })
 
   svgs.append('g')
-    .attr('transform', `rotate(-90, ${w/2} ${h/2}) translate(${(w/2) - margin.top}, ${(h/2)})`)
+    .attr('transform', `rotate(-90 ${w/2} ${h/2}) translate(${(w/2) - margin.top}, ${(h/2)})`)
     .attr('class', 'x axis text-bg')
     .call(xAxis);
 
   svgs.append('g')
-    .attr('transform', `rotate(-90, ${w/2} ${h/2}) translate(${(w/2) - margin.top}, ${(h/2)})`)
+    .attr('transform', `rotate(-90 ${w/2} ${h/2}) translate(${(w/2) - margin.top}, ${(h/2)})`)
     .attr('class', 'x axis')
     .call(xAxis);
 
@@ -82,8 +82,8 @@ function build() {
 
 export function setup() {
   let inrow = 4;
-  if ($('.multiple-bar-wrapper').width() / 220 < inrow) inrow = Math.floor($('.multiple-bar-wrapper').width() / 220);
-  outerW = ($('.multiple-bar-wrapper').width() / inrow) - 20;
+  if ($('.multiple-armadillo-wrapper').width() / 220 < inrow) inrow = Math.floor($('.multiple-armadillo-wrapper').width() / 220);
+  outerW = ($('.multiple-armadillo-wrapper').width() / inrow) - 20;
   if (outerW < 200) outerW = 200;
 
   outerH = outerW;
