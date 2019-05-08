@@ -31,6 +31,10 @@ function build() {
     .append('div')
     .attr('class', 'multiple-table-container');
 
+  containers.append('p')
+    .text(d => d.key)
+    .style('margin', 0);
+
   tables = containers.append('table');
 
   tables.style('width', `${w}px`).style('height', d => `${d.values.length*rowh}px`);
