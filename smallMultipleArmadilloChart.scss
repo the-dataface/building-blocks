@@ -1,0 +1,32 @@
+@import '_variables';
+
+.multiple-armadillo-wrapper {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .multiple-armadillo-container {
+    margin: 0 20px 20px 0;
+
+    .armadillo {
+      fill: $dark;
+      stroke: white;
+      stroke-width: 0.5;
+    }
+
+    .x.axis {
+      text {
+        transform: rotate(90deg) translateY(-2px);
+        text-anchor: middle;
+      }
+
+      &.text-bg {
+        text {
+          stroke: white;
+          stroke-width: 3px;
+        }
+      }
+    }
+  }
+}
