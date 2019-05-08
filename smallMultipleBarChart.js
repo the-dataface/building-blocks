@@ -1,7 +1,7 @@
 import * as util from "./utilities.js";
 import * as globals from './_globals.js';
 
-const container = d3.select('.multiple-bar-line-wrapper'),
+const container = d3.select('.multiple-bar-wrapper'),
   tooltip = container.select('.tooltip');
 
 let svgs,
@@ -26,11 +26,11 @@ const xAccessor = 'xVal',
 function build() {
   container.selectAll('*:not(.tooltip)').remove();
 
-  const containers = container.selectAll('.multiple-line-container')
+  const containers = container.selectAll('.multiple-bar-container')
     .data(nested)
     .enter()
     .append('div')
-    .attr('class', 'multiple-line-container');
+    .attr('class', 'multiple-bar-container');
 
   containers.append('p')
     .text(d => d.key)
@@ -92,7 +92,11 @@ function mouseout() {
 
 
 export function setup() {
-  outerW = 200;
+  let inrow = 4;
+  if ($('.multiple-bar-wrapper').width() / 220 < inrow) inrow = Math.floor($('.multiple-bar-wrapper').width() / 220);
+  outerW = ($('.multiple-bar-wrapper').width() / inrow) - 20;
+  if (outerW < 200) outerW = 200;
+
   outerH = 170;
 
   margin = {

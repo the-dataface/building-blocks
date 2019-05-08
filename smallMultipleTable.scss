@@ -1,0 +1,82 @@
+@import '_variables';
+
+.multiple-table-wrapper {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .multiple-table-container {
+    margin: 0 20px 20px 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-radius: 2px;
+
+    thead {
+      font-family: $content;
+      text-align: left;
+      color: white;
+      background-color: $dark;
+
+      th {
+        padding: 4px 8px;
+
+        &:first-child {
+          border-radius: 2px 0 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 2px 0 0;
+        }
+      }
+    }
+
+    tbody {
+      font-size: 14px;
+      font-family: $content;
+
+      td {
+        padding: 4px 8px;
+        color: $black;
+      }
+
+      tr {
+        &:nth-child(even) {
+          background-color: $gray4;
+        }
+
+        &:nth-child(odd) {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .multiple-table-line-wrapper {
+    table {
+      thead {
+        background-color: rgba(white, .25);
+      }
+
+      tbody {
+        td {
+          color: white;
+        }
+
+        tr {
+          &:nth-child(even) {
+            background-color: rgba(white, 0.1);
+          }
+
+          &:nth-child(odd) {
+            background-color: $dark;
+          }
+        }
+      }
+    }
+  }
+}

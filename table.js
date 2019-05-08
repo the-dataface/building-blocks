@@ -80,7 +80,7 @@ export function init() {
     data.sort((a, b) => ascending ? d3.ascending(a[sortAccessor], b[sortAccessor]) : d3.descending(a[sortAccessor], b[sortAccessor]));
 
     // slice to specified length
-    if (n) data.splice(n);
+    if (n) data = data.slice(0, n);
 
     setup();
   })
