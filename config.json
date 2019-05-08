@@ -1,5 +1,5 @@
 {
-  "charts": ["scatterPlot", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
+  "charts": ["scatterPlot", "smallMultipleBarChart", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
   "files": {
     "scatterPlot": {
       "js": ["scatterPlot.js"],
