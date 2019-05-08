@@ -1,7 +1,8 @@
 import * as util from "./utilities.js";
 import * as globals from './_globals.js';
 
-const container = d3.select('.multiple-armadillo-wrapper');
+const container = d3.select('.multiple-armadillo-wrapper'),
+  tooltip = container.select('.tooltip');
 
 let svgs,
   gs;
@@ -24,7 +25,8 @@ const armadillo = d3.pie(),
 // what should we nest by?
 const groupBy = 'name';
 
-const valAccessor = 'val'
+const valAccessor = 'val',
+  xAccessor = 'category';
 
 function build() {
   container.selectAll('*:not(.tooltip)').remove();
@@ -78,6 +80,25 @@ function build() {
     .enter().append('path')
     .attr('class', 'armadillo')
     .attr('d', arc)
+    .on('mousemove', mousemove)
+    .on('mouseout', mouseout);
+}
+
+function mousemove(d) {
+  d = d.data;
+
+  const xPos = d3.mouse(container.node())[0] - w,
+    yPos = d3.mouse(container.node())[1];
+
+  console.log(d);
+
+  tooltip.style('display', 'block')
+    .style('transform', util.tooltipPosition(w, margin, xPos, yPos))
+    .html(`<h6>${d[xAccessor]}</h6><p><strong>Value</strong>: ${d[valAccessor]}`);
+}
+
+function mouseout() {
+  tooltip.style('display', 'none');
 }
 
 export function setup() {
