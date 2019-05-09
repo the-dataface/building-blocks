@@ -1,5 +1,5 @@
 {
-  "charts": ["scatterPlot", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
+  "charts": ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
   "files": {
     "scatterPlot": {
       "js": ["scatterPlot.js"],
@@ -12,6 +12,12 @@
       "css": ["smallMultipleLineChart.scss"],
       "html": ["smallMultipleLineChart.hbs"],
       "data": ["smallMultipleLineChart.csv"]
+    },
+    "smallMultipleRadarChart": {
+      "js": ["smallMultipleRadarChart.js"],
+      "css": ["smallMultipleRadarChart.scss"],
+      "html": ["smallMultipleRadarChart.hbs"],
+      "data": ["smallMultipleRadarChart.csv"]
     },
     "smallMultipleArmadilloChart": {
       "js": ["smallMultipleArmadilloChart.js"],
