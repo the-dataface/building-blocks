@@ -1,0 +1,84 @@
+@import '_variables';
+
+.multiple-radar-wrapper {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .multiple-radar-container {
+    margin: 0 20px 20px 0;
+
+    .radar-fill {
+      fill: $dark;
+      fill-opacity: 0.25;
+      stroke: none;
+    }
+
+    .radar-stroke {
+      fill: none;
+      stroke: $dark;
+      stroke-width: 1;
+    }
+
+    .center-circle {
+      fill: white;
+    }
+
+    .axis {
+      circle {
+        stroke-dasharray: 1,4;
+      }
+
+      line {
+        opacity: 0.5;
+        stroke-dasharray: 0,0;
+      }
+    }
+
+    .x.axis {
+      text {
+        transform: rotate(90deg) translateY(-4px);
+        text-anchor: middle;
+      }
+
+      &.text-bg {
+        text {
+          stroke: white;
+          stroke-width: 3px;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .multiple-radar-wrapper {
+    .multiple-radar-container {
+      .radar-fill {
+        fill: $highlight;
+        fill-opacity: 0.25;
+        stroke: none;
+      }
+
+      .radar-stroke {
+        fill: none;
+        stroke: white;
+        stroke-width: 1;
+      }
+
+      .center-circle {
+        fill: $dark;
+      }
+
+      .x.axis {
+        &.text-bg {
+          text {
+            stroke: $dark;
+            stroke-width: 3px;
+          }
+        }
+      }
+    }
+  }
+}

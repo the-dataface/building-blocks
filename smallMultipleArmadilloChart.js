@@ -90,8 +90,6 @@ function mousemove(d) {
   const xPos = d3.mouse(container.node())[0] - w,
     yPos = d3.mouse(container.node())[1];
 
-  console.log(d);
-
   tooltip.style('display', 'block')
     .style('transform', util.tooltipPosition(w, margin, xPos, yPos))
     .html(`<h6>${d[xAccessor]}</h6><p><strong>Value</strong>: ${d[valAccessor]}`);
