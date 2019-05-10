@@ -1,7 +1,6 @@
 {
   "charts": {
-    "types": 
-      ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
+    "types": ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
     "files": {
       "scatterPlot": {
         "js": ["scatterPlot.js"],
@@ -92,6 +91,5 @@
       }
     }
   },
-  "helpers":
-    ["stateAbbreviations.json"]
+  "helpers": ["stateAbbreviations.json", "proSportsTeams.csv"]
 }

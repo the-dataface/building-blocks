@@ -1,0 +1,124 @@
+team,abbreviation,league,city,state,color1,color2,logo
+Arizona Diamondbacks,ARI,MLB,Phoenix,AZ,#A71930,#E3D4AD,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/ari.png
+Atlanta Braves,ATL,MLB,Atlanta,GA,#CE1141,#13274F,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/atl.png
+Baltimore Orioles,BAL,MLB,Baltimore,MD,#DF4601,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/bal.png
+Boston Red Sox,BOS,MLB,Boston,MA,#BD3039,#0C2340,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/bos.png
+Chicago Cubs,CHC,MLB,Chicago,IL,#0E3386,#CC3433,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/chc.png
+Chicago White Sox,CHW,MLB,Chicago,IL,#27251F,#C4CED4,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/chw.png
+Cincinnati Reds,CIN,MLB,Cincinnati,OH,#C6011F,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/cin.png
+Cleveland Indians,CLE,MLB,Cleveland,OH,#0C2340,#E31937,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/cle.png
+Colorado Rockies,COL,MLB,Denver,CO,#33006F,#C4CED4,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/col.png
+Detroit Tigers,DET,MLB,Detroit,MI,#0C2340,#FA4616,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/det.png
+Miami Marlins,MIA,MLB,Miami,FL,#00A3E0,#EF3340,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/mia.png
+Houston Astros,HOU,MLB,Houston,TX,#EB6E1F,#002D62,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/hou.png
+Kansas City Royals,KC,MLB,Kansas City,MO,#004687,#BD9B60,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/kc.png
+LA Angels,LAA,MLB,Los Angeles,CA,#003263,#BA0021,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/laa.png
+LA Dodgers,LAD,MLB,Los Angeles,CA,#005A9C,#EF3E42,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/lad.png
+Milwaukee Brewers,MIL,MLB,Milwaukee,WI,#0A2351,#B6922E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/mil.png
+Minnesota Twins,MIN,MLB,Minneapolis,MN,#002B5C,#D31145,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/min.png
+NY Mets,NYM,MLB,New York,NY,#002D72,#FF5910,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/nym.png
+NY Yankees,NYY,MLB,New York,NY,#003087,#E4002C,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/nyy.png
+Oakland Athletics,OAK,MLB,Oakland,CA,#003831,#EFB21E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/oak.png
+Philadelphia Phillies,PHI,MLB,Philadelphia,PA,#E81828,#002D72,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/phi.png
+Pittsburgh Pirates,PIT,MLB,Pittsburgh,PA,#FDB827,#27251F,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/pit.png
+San Diego Padres,SD,MLB,San Diego,CA,#002D62,#A2AAAD,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/sd.png
+San Francisco Giants,SF,MLB,San Francisco,CA,#FD5A1E,#27251F,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/sf.png
+Seattle Mariners,SEA,MLB,Seattle,WA,#005C5C,#0C2C56,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/sea.png
+St. Louis Cardinals,STL,MLB,St. Louis,MO,#C41E3A,#0C2340,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/stl.png
+Tampa Bay Rays,TB,MLB,St. Petersburg,FL,#8FBCE6,#092C5C,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/tb.png
+Texas Rangers,TEX,MLB,Arlington,TX,#003278,#C0111F,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/tex.png
+Toronto Blue Jays,TOR,MLB,Toronto,ON,#134A8E,#E8291C,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/tor.png
+Washington Nationals,WSH,MLB,Washington,DC,#AB0003,#14225A,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/MLB/wsh.png
+Atlanta Hawks,ATL,NBA,Atlanta,GA,#E03A3E,#C1D32F,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/atl.png
+Boston Celtics,BOS,NBA,Boston,MA,#007A33,#BA9653,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/bos.png
+Brooklyn Nets,BKN,NBA,Brooklyn,NY,#000000,#FFFFFF,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/bkn.png
+Charlotte Hornets,CHA,NBA,Charlotte,NC,#1D1160,#00788C,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/cha.png
+Chicago Bulls,CHI,NBA,Chicago,IL,#CE1141,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/chi.png
+Cleveland Cavaliers,CLE,NBA,Cleveland,OH,#6F263D,#041E42,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/cle.png
+Dallas Mavericks,DAL,NBA,Dallas,TX,#00538C,#002B5E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/dal.png
+Denver Nuggets,DEN,NBA,Denver,CO,#0E2240,#FEC524,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/den.png
+Detroit Pistons,DET,NBA,Detroit,MI,#C8102E,#006BB6,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/det.png
+Golden State Warriors,GSW,NBA,Oakland,CA,#006BB6,#FDB927,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/gsw.png
+Houston Rockets,HOU,NBA,Houston,TX,#CE1141,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/hou.png
+Indiana Pacers,IND,NBA,Indianapolis,IN,#002D62,#FDBB30,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/ind.png
+LA Clippers,LAC,NBA,Los Angeles,CA,#1D428A,#C8102E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/lac.png
+LA Lakers,LAL,NBA,Los Angeles,CA,#552583,#FDB927,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/lal.png
+Memphis Grizzlies,MEM,NBA,Memphis,TN,#5D76A9,#12173F,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/mem.png
+Miami Heat,MIA,NBA,Miami,FL,#98002E,#F9A01B,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/mia.png
+Milwaukee Bucks,MIL,NBA,Milwaukee,WI,#00471B,#EEE1C6,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/mil.png
+Minnesota Timberwolves,MIN,NBA,Minneapolis,MN,#0C2340,#236192,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/min.png
+New Orleans Pelicans,NO,NBA,New Orleans,LA,#0C2340,#C8102E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/no.png
+New York Knicks,NYK,NBA,New York,NY,#F58426,#006BB6,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/nyk.png
+Oklahoma City Thunder,OKC,NBA,Oklahoma City,OK,#007AC1,#EF3B24,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/okc.png
+Orlando Magic,ORL,NBA,Orlando,FL,#0077C0,#C4CED4,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/orl.png
+Philadelphia 76ers,PHI,NBA,Philadelphia,PA,#006BB6,#ED174C,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/phi.png
+Phoenix Suns,PHX,NBA,Phoenix,AZ,#1D1160,#E56020,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/phx.png
+Portland Trailblazers,POR,NBA,Portland,OR,#E03A3E,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/por.png
+Sacramento Kings,SAC,NBA,Sacramento,CA,#5A2D81,#63727A,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/sac.png
+San Antonio Spurs,SAS,NBA,San Antonio,TX,#C4CED4,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/sas.png
+Toronto Raptors,TOR,NBA,Toronto,ON,#CE1141,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/tor.png
+Utah Jazz,UTAH,NBA,Salt Lake City,UT,#002B5C,#00471B,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/utah.png
+Washington Wizards,WAS,NBA,Washington,DC,#002B5C,#E31837,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NBA/was.png
+Arizona Cardinals,ARI,NFL,Phoenix,AZ,#97233F,#FFB612,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/ari.png
+Atlanta Falcons,ATL,NFL,Atlanta,GA,#A71930,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/atl.png
+Baltimore Ravens,BAL,NFL,Baltimore,MD,#241773,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/bal.png
+Buffalo Bills,BUF,NFL,Buffalo,NY,#00338D,#C60C30,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/buf.png
+Carolina Panthers,CAR,NFL,Charlotte,NC,#0085CA,#101820,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/car.png
+Chicago Bears,CHI,NFL,Chicago,IL,#0B162A,#C83803,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/chi.png
+Cincinnati Bengals,CIN,NFL,Cincinnati,OH,#FB4F14,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/cin.png
+Cleveland Browns,CLE,NFL,Cleveland,OH,#311D00,#FF3C00,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/cle.png
+Dallas Cowboys,DAL,NFL,Dallas,TX,#003594,#7F9695,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/dal.png
+Denver Broncos,DEN,NFL,Denver,CO,#FB4F14,#002244,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/den.png
+Detroit Lions,DET,NFL,Detroit,MI,#0076B6,#B0B7BC,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/det.png
+Green Bay Packers,GB,NFL,Green Bay,WI,#203731,#FFB612,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/gb.png
+Houston Texans,HOU,NFL,Houston,TX,#03202F,#A71930,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/hou.png
+Indianapolis Colts,IND,NFL,Indianapolis,IN,#002C5F,#A2AAAD,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/ind.png
+Jacksonville Jaguars,JAX,NFL,Jacksonville,FL,#006778,#D7A22A,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/jax.png
+Kansas City Chiefs,KC,NFL,Kansas City,MO,#E31837,#FFB81C,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/kc.png
+LA Chargers,LAC,NFL,Los Angeles,CA,#002A5E,#FFC20E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/lac.png
+LA Rams,LAR,NFL,Los Angeles,CA,#002244,#866D4B,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/lar.png
+Miami Dolphins,MIA,NFL,Miami,FL,#008E97,#F26A24,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/mia.png
+Minnesota Vikings,MIN,NFL,Minneapolis,MN,#4F2683,#FFC62F,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/min.png
+New England Patriots,NE,NFL,Boston,MA,#002244,#C60C30,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/ne.png
+New Orleans Saints,NO,NFL,New Orleans,LA,#D3BC8D,#101820,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/no.png
+NY Giants,NYG,NFL,New York,NY,#A71930,#0B2265,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/nyg.png
+NY Jets,NYJ,NFL,New York,NY,#125740,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/nyj.png
+Oakland Raiders,OAK,NFL,Oakland,CA,#000000,#A5ACAF,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/oak.png
+Philadelphia Eagles,PHI,NFL,Philadelphia,PA,#004C54,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/phi.png
+Pittsburgh Steelers,PIT,NFL,Pittsburgh,PA,#FFB612,#101820,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/pit.png
+San Francisco 49ers,SF,NFL,San Francisco,CA,#AA0000,#B3995D,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/sf.png
+Seattle Seahawks,SEA,NFL,Seattle,WA,#002244,#A5ACAF,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/sea.png
+Tampa Bay Buccaneers,TB,NFL,Tampa,FL,#D50A0A,#FF7900,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/tb.png
+Tennessee Titans,TEN,NFL,Nashville,TN,#0C2340,#418FDE,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/ten.png
+Washington Redskins,WAS,NFL,Washington,DC,#773141,#FFB612,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NFL/was.png
+Anaheim Ducks,ANA,NHL,Anaheim,CA,#B09862,#F47A38,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/ana.png
+Boston Bruins,BOS,NHL,Boston,MA,#FFB81C,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/bos.png
+Buffalo Sabres,BUF,NHL,Buffalo,NY,#002654,#FCB514,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/buf.png
+Calgary Flames,CGY,NHL,Calgary,AB,#C8102E,#111111,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/cgy.png
+Carolina Hurricanes,CAR,NHL,Raleigh,NC,#CC0000,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/car.png
+Chicago Blackhawks,CHI,NHL,Chicago,IL,#CF0A2C,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/chi.png
+Colorado Avalanche,COL,NHL,Denver,CO,#6F263D,#236192,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/col.png
+Columbus Blue Jackets,CBJ,NHL,Columbus,OH,#002654,#CE1126,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/cbj.png
+Dallas Stars,DAL,NHL,Dallas,TX,#006847,#8F8F8C,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/dal.png
+Detroit Red Wings,DET,NHL,Detroit,MI,#CE1126,#FFFFFF,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/det.png
+Edmonton Oilers,EDM,NHL,Edmonton,AB,#041E42,#FF4C00,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/edm.png
+Florida Panthers,FLA,NHL,Miami,FL,#041E42,#C8102E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/fla.png
+LA Kings,LA,NHL,Los Angeles,CA,#111111,#A2AAAD,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/la.png
+Minnesota Wild,MIN,NHL,Saint Paul,MN,#A6192E,#154734,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/min.png
+Montreal Canadiens,MTL,NHL,Montreal,QC,#AF1E2D,#192168,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/mtl.png
+Nashville Predators,NSH,NHL,Nashville,TN,#FFB81C,#041E42,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/nsh.png
+New Jersey Devils,NJ,NHL,Newark,NJ,#CE1126,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/nj.png
+NY Islanders,NYI,NHL,New York,NY,#00539B,#F47D30,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/nyi.png
+NY Rangers,NYR,NHL,New York,NY,#0038A8,#CE1126,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/nyr.png
+Ottawa Senators,OTT,NHL,Ottawa,ON,#E31837,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/ott.png
+Philadelphia Flyers,PHI,NHL,Philadelphia,PA,#F74902,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/phi.png
+Arizona Coyotes,ARI,NHL,Phoenix,AZ,#8C2633,#E2D6B5,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/ari.png
+Pittsburgh Penguins,PIT,NHL,Pittsburgh,PA,#FCB514,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/pit.png
+San Jose Sharks,SJ,NHL,San Jose,CA,#006D75,#000000,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/sj.png
+St. Louis Blues,STL,NHL,St. Louis,MO,#002F87,#FCB514,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/stl.png
+Tampa Bay Lightning,TB,NHL,Tampa,FL,#002868,#FFFFFF,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/tb.png
+Toronto Maple Leafs,TOR,NHL,Toronto,ON,#003E7E,#FFFFFF,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/tor.png
+Vancouver Canucks,VAN,NHL,Vancouver,BC,#001F5B,#00843D,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/van.png
+Washington Capitals,WSH,NHL,Washington,DC,#041E42,#C8102E,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/wsh.png
+Winnipeg Jets,WPG,NHL,Winnipeg,MB,#041E42,#004C97,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/wpg.png
+Vegas Golden Knights,VGS,NHL,Las Vegas,NV,#B4975A,#333F42,https://raw.githubusercontent.com/the-dataface/building-blocks/master/helpers/assets/img/logos/NHL/vgs.png
