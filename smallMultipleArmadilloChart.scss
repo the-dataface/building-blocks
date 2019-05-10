@@ -15,6 +15,22 @@
       stroke-width: 1;
     }
 
+    .center-circle {
+      fill: white;
+    }
+
+    .axis {
+      circle {
+        stroke-dasharray: 1,4;
+        color: $gray3;
+      }
+
+      line {
+        opacity: 0.5;
+        stroke-dasharray: 0,0;
+      }
+    }
+
     .x.axis {
       text {
         transform: rotate(90deg) translateY(-2px);
@@ -37,6 +53,16 @@
       .armadillo {
         fill: $highlight;
         stroke: $dark;
+      }
+
+      .center-circle {
+        fill: $dark;
+      }
+
+      .axis {
+        circle {
+          color: $gray2;
+        }
       }
 
       .x.axis {
