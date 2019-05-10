@@ -1,92 +1,97 @@
 {
-  "charts": ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
-  "files": {
-    "scatterPlot": {
-      "js": ["scatterPlot.js"],
-      "css": ["scatterPlot.scss"],
-      "html": ["scatterPlot.hbs"],
-      "data": ["scatterPlot.csv"]
-    },
-    "smallMultipleLineChart": {
-      "js": ["smallMultipleLineChart.js"],
-      "css": ["smallMultipleLineChart.scss"],
-      "html": ["smallMultipleLineChart.hbs"],
-      "data": ["smallMultipleLineChart.csv"]
-    },
-    "smallMultipleRadarChart": {
-      "js": ["smallMultipleRadarChart.js"],
-      "css": ["smallMultipleRadarChart.scss"],
-      "html": ["smallMultipleRadarChart.hbs"],
-      "data": ["smallMultipleRadarChart.csv"]
-    },
-    "smallMultipleArmadilloChart": {
-      "js": ["smallMultipleArmadilloChart.js"],
-      "css": ["smallMultipleArmadilloChart.scss"],
-      "html": ["smallMultipleArmadilloChart.hbs"],
-      "data": ["smallMultipleArmadilloChart.csv"]
-    },
-    "smallMultipleTable": {
-      "js": ["smallMultipleTable.js"],
-      "css": ["smallMultipleTable.scss"],
-      "html": ["smallMultipleTable.hbs"],
-      "data": ["smallMultipleTable.csv"]
-    },
-    "table": {
-      "js": ["table.js"],
-      "css": ["table.scss"],
-      "html": ["table.hbs"],
-      "data": ["table.csv"]
-    },
-    "smallMultipleBarChart": {
-      "js": ["smallMultipleBarChart.js"],
-      "css": ["smallMultipleBarChart.scss"],
-      "html": ["smallMultipleBarChart.hbs"],
-      "data": ["smallMultipleBarChart.csv"]
-    },
-    "usCounty": {
-      "js": ["usCounty.js"],
-      "css": ["usCounty.scss"],
-      "html": ["usCounty.hbs"],
-      "data": ["usCounty.json"]
-    },
-    "usState": {
-      "js": ["usState.js"],
-      "css": ["usState.scss"],
-      "html": ["usState.hbs"],
-      "data": ["usState.json"]
-    },
-    "scrollyCenter": {
-      "js": ["scrollyCenter.js"],
-      "css": ["scrollyCenter.scss"],
-      "html": ["scrollyCenter.hbs"]
-    },
-    "scrollyLeft": {
-      "js": ["scrollyLeft.js"],
-      "css": ["scrollySide.scss"],
-      "html": ["scrollyLeft.hbs"]
-    },
-    "scrollyRight": {
-      "js": ["scrollyRight.js"],
-      "css": ["scrollySide.scss"],
-      "html": ["scrollyRight.hbs"]
-    },
-    "horizontalBarChart": {
-      "js": ["horizontalBarChart.js"],
-      "css": ["horizontalBarChart.scss"],
-      "html": ["horizontalBarChart.hbs"],
-      "data": ["horizontalBarChart.csv"]
-    },
-    "lineChart": {
-      "js": ["lineChart.js"],
-      "css": ["lineChart.scss"],
-      "html": ["lineChart.hbs"],
-      "data": ["lineChart.csv"]
-    },
-    "beeswarm": {
-      "js": ["beeswarm.js"],
-      "css": ["beeswarm.scss"],
-      "html": ["beeswarm.hbs"],
-      "data": ["beeswarm.csv"]
+  "charts": {
+    "types": 
+      ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
+    "files": {
+      "scatterPlot": {
+        "js": ["scatterPlot.js"],
+        "css": ["scatterPlot.scss"],
+        "html": ["scatterPlot.hbs"],
+        "data": ["scatterPlot.csv"]
+      },
+      "smallMultipleLineChart": {
+        "js": ["smallMultipleLineChart.js"],
+        "css": ["smallMultipleLineChart.scss"],
+        "html": ["smallMultipleLineChart.hbs"],
+        "data": ["smallMultipleLineChart.csv"]
+      },
+      "smallMultipleRadarChart": {
+        "js": ["smallMultipleRadarChart.js"],
+        "css": ["smallMultipleRadarChart.scss"],
+        "html": ["smallMultipleRadarChart.hbs"],
+        "data": ["smallMultipleRadarChart.csv"]
+      },
+      "smallMultipleArmadilloChart": {
+        "js": ["smallMultipleArmadilloChart.js"],
+        "css": ["smallMultipleArmadilloChart.scss"],
+        "html": ["smallMultipleArmadilloChart.hbs"],
+        "data": ["smallMultipleArmadilloChart.csv"]
+      },
+      "smallMultipleTable": {
+        "js": ["smallMultipleTable.js"],
+        "css": ["smallMultipleTable.scss"],
+        "html": ["smallMultipleTable.hbs"],
+        "data": ["smallMultipleTable.csv"]
+      },
+      "table": {
+        "js": ["table.js"],
+        "css": ["table.scss"],
+        "html": ["table.hbs"],
+        "data": ["table.csv"]
+      },
+      "smallMultipleBarChart": {
+        "js": ["smallMultipleBarChart.js"],
+        "css": ["smallMultipleBarChart.scss"],
+        "html": ["smallMultipleBarChart.hbs"],
+        "data": ["smallMultipleBarChart.csv"]
+      },
+      "usCounty": {
+        "js": ["usCounty.js"],
+        "css": ["usCounty.scss"],
+        "html": ["usCounty.hbs"],
+        "data": ["usCounty.json"]
+      },
+      "usState": {
+        "js": ["usState.js"],
+        "css": ["usState.scss"],
+        "html": ["usState.hbs"],
+        "data": ["usState.json"]
+      },
+      "scrollyCenter": {
+        "js": ["scrollyCenter.js"],
+        "css": ["scrollyCenter.scss"],
+        "html": ["scrollyCenter.hbs"]
+      },
+      "scrollyLeft": {
+        "js": ["scrollyLeft.js"],
+        "css": ["scrollySide.scss"],
+        "html": ["scrollyLeft.hbs"]
+      },
+      "scrollyRight": {
+        "js": ["scrollyRight.js"],
+        "css": ["scrollySide.scss"],
+        "html": ["scrollyRight.hbs"]
+      },
+      "horizontalBarChart": {
+        "js": ["horizontalBarChart.js"],
+        "css": ["horizontalBarChart.scss"],
+        "html": ["horizontalBarChart.hbs"],
+        "data": ["horizontalBarChart.csv"]
+      },
+      "lineChart": {
+        "js": ["lineChart.js"],
+        "css": ["lineChart.scss"],
+        "html": ["lineChart.hbs"],
+        "data": ["lineChart.csv"]
+      },
+      "beeswarm": {
+        "js": ["beeswarm.js"],
+        "css": ["beeswarm.scss"],
+        "html": ["beeswarm.hbs"],
+        "data": ["beeswarm.csv"]
+      }
     }
-  }
+  },
+  "helpers":
+    ["stateAbbreviations.json"]
 }
