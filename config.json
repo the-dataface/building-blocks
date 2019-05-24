@@ -1,12 +1,18 @@
 {
   "charts": {
-    "types": ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm"],
+    "types": ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm", "map-list"],
     "files": {
       "scatterPlot": {
         "js": ["scatterPlot.js"],
         "css": ["scatterPlot.scss"],
         "html": ["scatterPlot.hbs"],
         "data": ["scatterPlot.csv"]
+      },
+      "map-list": {
+        "js": ["map-list.js"],
+        "css": ["map-list.scss"],
+        "html": ["map-list.hbs"],
+        "data": ["yelp-cities.txt", "yelp-states.txt", "yelp-collections.txt"]
       },
       "smallMultipleLineChart": {
         "js": ["smallMultipleLineChart.js"],

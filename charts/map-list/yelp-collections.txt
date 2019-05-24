@@ -1,0 +1,50 @@
+category1	category2	city	name	state	url
+Pizza		San Francisco	Tony’s Pizza Napoletana	CA	/biz/tonys-pizza-napoletana-san-francisco
+Ramen		San Francisco	Nojo Ramen Tavern	CA	/biz/nojo-ramen-tavern-san-francisco-2
+American (Traditional)		San Francisco	Eats	CA	/biz/eats-san-francisco?osq=eats
+Bars		San Francisco	Liholiho Yacht Club	CA	/biz/liholiho-yacht-club-san-francisco-2
+Japanese		San Francisco	KAIYŌ	CA	/biz/kaiy%C5%8D-san-francisco-2
+Bakeries		St. Louis	Union Loafers Cafe and Bread Bakery	MO	/biz/union-loafers-cafe-and-bread-bakery-saint-louis?osq=Waitlist
+Breakfast & Brunch		St. Louis	Half & Half	MO	/biz/half-and-half-saint-louis?osq=Waitlist
+Mexican		St. Louis	Mission Taco Joint	MO	/biz/mission-taco-joint-saint-louis-9?osq=Waitlist
+Wine Bars		St. Louis	Olive + Oak	MO	/biz/olive-oak-saint-louis?osq=restaurants
+Cajun/Creole		St. Louis	Broadway Oyster Bar	MO	/biz/broadway-oyster-bar-saint-louis?osq=restaurants
+Japanese		Honolulu	TsuruTonTan Udon Noodle Brasserie	HI	/biz/tsurutontan-udon-noodle-brasserie-honolulu?osq=Waitlist
+Sushi Bars		Honolulu	Aloha Cones	HI	/biz/aloha-cones-honolulu-5
+Creperies		Honolulu	Le Crepe Cafe	HI	/biz/le-crepe-cafe-honolulu-19
+Desserts		Honolulu	Ka ‘Ikena	HI	/biz/ka-ikena-honolulu
+Japanese		Honolulu	Odori-ko	HI	/biz/odori-ko-honolulu-3
+Breakfast & Brunch		Plano	FirstWatch	TX	/biz/first-watch-plano-2?osq=Waitlist
+Latin American		Plano	Lima Taverna	TX	/biz/lima-taverna-plano?osq=Waitlist
+American (Traditional)		Plano	Union Bear	TX	/biz/union-bear-plano-3
+Italian		Plano	Amoretto Italian Restaurant	TX	/biz/amoretto-italian-restaurant-plano
+Chinese		Plano	Sizzling Pot King	TX	/biz/sizzling-pot-king-plano-2
+Bars		San Diego	Werewolf	CA	/biz/werewolf-san-diego?osq=Waitlist
+Taiwanese		San Diego	Tasty Pot	CA	/biz/tasty-pot-san-diego-4?osq=Waitlist
+Breakfast & Brunch		San Diego	Cali Comfort BBQ	CA	/biz/cali-comfort-bbq-spring-valley-3?osq=Waitlist
+American (New)		San Diego	Common Stock	CA	/biz/common-stock-san-diego
+Thai		Las Vegas	Weera Thai	NV	/biz/weera-thai-las-vegas-3?osq=Waitlist
+Cafes		Las Vegas	Truffles N Bacon Cafe	NV	/biz/truffles-n-bacon-cafe-las-vegas-6?osq=Waitlist
+Asian Fusion		Las Vegas	Flock & Fowl	NV	/biz/flock-and-fowl-las-vegas-2
+Italian		Las Vegas	Chef Marc’s Trattoria	NV	/biz/chef-marcs-trattoria-las-vegas
+American (New)		Las Vegas	Therapy	NV	/biz/therapy-las-vegas-5
+American (New)		Richmond	Sedona Taphouse	VA	/biz/sedona-taphouse-midlothian?osq=Waitlist
+Burgers		Richmond	Jack Brown’s Beer and Burger Joint	VA	/biz/jack-browns-beer-and-burger-joint-richmond?osq=Waitlist
+Pubs		Richmond	Billy Jack’s Shack	VA	/biz/billy-jacks-shack-richmond-2?osq=Waitlist
+American (New)		Richmond	Laura Lee’s	VA	/biz/laura-lees-richmond
+Southern		Richmond	The Roosevelt	VA	/biz/the-roosevelt-richmond
+Chicken Wings		Pittsburgh	Bigham Tavern	PA	/biz/bigham-tavern-pittsburgh?osq=Waitlist
+Burgers		Pittsburgh	Burgatory	PA	/biz/burgatory-pittsburgh-5?osq=Waitlist
+American (New)		Pittsburgh	täkō	PA	/biz/t%C3%A4k%C5%8D-pittsburgh?osq=Waitlist
+Caribbean		Pittsburgh	Musa Caribbean / Cajun Fare	PA	/biz/musa-caribbean-cajun-fare-pittsburgh-2
+Bakeries		Pittsburgh	Pitaland	PA	/biz/pitaland-pittsburgh
+Peruvian		Baltimore	Puerto 511	MD	/biz/puerto-511-baltimore?osq=Waitlist
+American (New)		Baltimore	Topside	MD	/biz/topside-baltimore-2?osq=Waitlist
+Pubs		Baltimore	Annabel Lee Tavern	MD	/biz/annabel-lee-tavern-baltimore?osq=Waitlist
+Mediterranean		Baltimore	The Kabul	MD	/biz/the-kabul-baltimore
+Coffee & Tea		Baltimore	Water for Chocolate	MD	/biz/water-for-chocolate-baltimore
+Vegetarian		Austin	Bouldin Creek Cafe	TX	/biz/bouldin-creek-cafe-austin?osq=Waitlist
+Breakfast & Brunch		Austin	Phoebe’s Diner	TX	/biz/phoebes-diner-austin?osq=Waitlist
+Vegetarian		Austin	Citizen Eatery	TX	/biz/citizen-eatery-austin?osq=Waitlist
+Halal		Austin	The Halal Corner	TX	/biz/the-halal-corner-austin
+Sushi Bars		Austin	Fukumoto Sushi & Yakitori	TX	/biz/fukumoto-sushi-and-yakitori-austin
