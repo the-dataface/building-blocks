@@ -1,78 +1,78 @@
 @import '_variables';
 
 .multiple-armadillo-wrapper {
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 
-  .multiple-armadillo-container {
-    margin: 0 20px 20px 0;
+	.multiple-armadillo-container {
+		margin: 0 20px 20px 0;
 
-    .armadillo {
-      fill: $dark;
-      stroke: white;
-      stroke-width: 1;
-    }
+		.armadillo {
+			fill: $dark;
+			stroke: white;
+			stroke-width: 1;
+		}
 
-    .center-circle {
-      fill: white;
-    }
+		.center-circle {
+			fill: white;
+		}
 
-    .axis {
-      circle {
-        stroke-dasharray: 1,4;
-        color: $gray3;
-      }
+		.axis {
+			circle {
+				stroke-dasharray: 1,4;
+				color: $gray3;
+			}
 
-      line {
-        opacity: 0.5;
-        stroke-dasharray: 0,0;
-      }
-    }
+			line {
+				opacity: 0.5;
+				stroke-dasharray: 0,0;
+			}
+		}
 
-    .x.axis {
-      text {
-        transform: rotate(90deg) translateY(-2px);
-        text-anchor: middle;
-      }
+		.x.axis {
+			text {
+				transform: rotate(90deg) translateY(-2px);
+				text-anchor: middle;
+			}
 
-      &.text-bg {
-        text {
-          stroke: white;
-          stroke-width: 3px;
-        }
-      }
-    }
-  }
+			&.text-bg {
+				text {
+					stroke: white;
+					stroke-width: 3px;
+				}
+			}
+		}
+	}
 }
 
-.dark {
-  .multiple-armadillo-wrapper {
-    .multiple-armadillo-container {
-      .armadillo {
-        fill: $highlight;
-        stroke: $dark;
-      }
+.df-wrapper.dark {
+	.multiple-armadillo-wrapper {
+		.multiple-armadillo-container {
+			.armadillo {
+				fill: $highlight;
+				stroke: $dark;
+			}
 
-      .center-circle {
-        fill: $dark;
-      }
+			.center-circle {
+				fill: $dark;
+			}
 
-      .axis {
-        circle {
-          color: $gray2;
-        }
-      }
+			.axis {
+				circle {
+					color: $gray2;
+				}
+			}
 
-      .x.axis {
-        &.text-bg {
-          text {
-            stroke: $dark;
-            stroke-width: 3px;
-          }
-        }
-      }
-    }
-  }
+			.x.axis {
+				&.text-bg {
+					text {
+						stroke: $dark;
+						stroke-width: 3px;
+					}
+				}
+			}
+		}
+	}
 }

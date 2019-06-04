@@ -1,286 +1,286 @@
 @import '_variables';
 
-section {
-  &.yelp-map-list-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0;
-  }
+section.df-wrapper {
+	&.yelp-map-list-wrapper {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0;
+	}
 }
 
 .yelp-map-wrapper {
-  position: relative;
-  flex-grow: 2;
-  margin-bottom: -40px;
-  transform: translateY(-40px);
+	position: relative;
+	flex-grow: 2;
+	margin-bottom: -40px;
+	transform: translateY(-40px);
 }
 
 .yelp-map-container {
-  height: 600px;
-  width: 100%;
-  opacity: 0;
+	height: 600px;
+	width: 100%;
+	opacity: 0;
 }
 
 .yelp-list-wrapper {
-  position: relative;
-  display: block;
-  margin-bottom: 40px;
-  width: 300px;
-  height: 450px;
-  @media only screen and (min-width: 764px) {
-    width: 600px;
-    height: 300px;
-  }
-  @media only screen and (min-width: 1000px) {
-    width: 350px;
-  }
+	position: relative;
+	display: block;
+	margin-bottom: 40px;
+	width: 300px;
+	height: 450px;
+	@media only screen and (min-width: 764px) {
+		width: 600px;
+		height: 300px;
+	}
+	@media only screen and (min-width: 1000px) {
+		width: 350px;
+	}
 }
 
 .yelp-list-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 1px solid #d3d3d3;
-  height: 58px;
-  padding: 0 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid #d3d3d3;
+	height: 58px;
+	padding: 0 0 10px;
 
-  p {
-    color: grey;
-    margin: 0 0 5px;
-    font-size: 12px;
-  }
+	p {
+		color: grey;
+		margin: 0 0 5px;
+		font-size: 12px;
+	}
 
-  div {
-    cursor: pointer;
+	div {
+		cursor: pointer;
 
-    h4 {
-      font-weight: 800;
-      color: black;
-      margin: 0 0 5px;
-      display: inline-block;
-      font-size: 18pxl;
-    }
+		h4 {
+			font-weight: 800;
+			color: black;
+			margin: 0 0 5px;
+			display: inline-block;
+			font-size: 18pxl;
+		}
 
-    p {
-      display: block;
-    }
-  }
-  @media only screen and (min-width: 764px) {
-    p {
-      font-size: 14px;
-    }
+		p {
+			display: block;
+		}
+	}
+	@media only screen and (min-width: 764px) {
+		p {
+			font-size: 14px;
+		}
 
-    div h4 {
-      font-size: 20px;
-    }
-  }
-  @media only screen and (min-width: 1000px) {
-    p {
-      font-size: 16px;
-    }
+		div h4 {
+			font-size: 20px;
+		}
+	}
+	@media only screen and (min-width: 1000px) {
+		p {
+			font-size: 16px;
+		}
 
-    div h4 {
-      font-size: 24px;
-    }
-  }
+		div h4 {
+			font-size: 24px;
+		}
+	}
 }
 
 .yelp-list-container {
-  position: relative;
-  margin-top: 5px;
-  @media only screen and (min-width: 764px) {
-    margin-top: 10px;
-  }
-  @media only screen and (min-width: 1000px) {
-    margin-top: 10px;
-  }
+	position: relative;
+	margin-top: 5px;
+	@media only screen and (min-width: 764px) {
+		margin-top: 10px;
+	}
+	@media only screen and (min-width: 1000px) {
+		margin-top: 10px;
+	}
 }
 
 .yelp-list-item {
-  position: absolute;
+	position: absolute;
 
-  .business-name {
-    font-weight: 800;
-    font-size: 13px;
-    color: $highlight;
-    cursor: pointer;
-  }
+	.business-name {
+		font-weight: 800;
+		font-size: 13px;
+		color: $highlight;
+		cursor: pointer;
+	}
 
-  .category-name {
-    font-weight: 400;
-    fotn-size: 12px;
-    color: $gray3;
-  }
+	.category-name {
+		font-weight: 400;
+		fotn-size: 12px;
+		color: $gray3;
+	}
 
-  p {
-    line-height: 1.2;
-    margin: 0 0 -3px;
-  }
+	p {
+		line-height: 1.2;
+		margin: 0 0 -3px;
+	}
 
-  a {
-    text-decoration: none !important;
+	a {
+		text-decoration: none !important;
 
-    &:hover {
-      border-bottom: 1px solid #333;
-    }
-  }
-  @media only screen and (min-width: 764px) {
-    .business-name {
-      font-size: 14px;
-    }
+		&:hover {
+			border-bottom: 1px solid #333;
+		}
+	}
+	@media only screen and (min-width: 764px) {
+		.business-name {
+			font-size: 14px;
+		}
 
-    .category-name {
-      font-size: 12px;
-    }
+		.category-name {
+			font-size: 12px;
+		}
 
-    p {
-      margin-bottom: -3px;
-    }
-  }
-  @media only screen and (min-width: 1000px) {
-    .business-name {
-      font-size: 16px;
-    }
+		p {
+			margin-bottom: -3px;
+		}
+	}
+	@media only screen and (min-width: 1000px) {
+		.business-name {
+			font-size: 16px;
+		}
 
-    .category-name {
-      font-size: 14px;
-    }
+		.category-name {
+			font-size: 14px;
+		}
 
-    p {
-      margin-bottom: -3px;
-    }
-  }
+		p {
+			margin-bottom: -3px;
+		}
+	}
 }
 
 .yelp-map-container .state-lines,
 .yelp-map-container .state-lines path {
-  fill: $gray3 !important;
-  stroke: white !important;
+	fill: $gray3 !important;
+	stroke: white !important;
 }
 
 .yelp-map-city-group {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .yelp-map-city-inner-circle {
-  fill: #d32323;
+	fill: #d32323;
 }
 
 .yelp-map-city-inner-rank {
-  fill: white;
-  text-anchor: middle;
-  dominant-baseline: middle;
-  font-weight: 800;
-  font-family: $content;
-  font-size: 8px;
+	fill: white;
+	text-anchor: middle;
+	dominant-baseline: middle;
+	font-weight: 800;
+	font-family: $content;
+	font-size: 8px;
 }
 
 .yelp-map-city-label {
-  fill: #333;
-  font-weight: 800;
-  font-family: $content;
-  font-size: 8px;
-  display: none;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+	fill: #333;
+	font-weight: 800;
+	font-family: $content;
+	font-size: 8px;
+	display: none;
+	text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .yelp-map-city-outer-circle {
-  fill: none;
-  stroke: #EC5851;
-  stroke-width: 1;
+	fill: none;
+	stroke: #EC5851;
+	stroke-width: 1;
 }
 @media only screen and (min-width: 764px) {
-  .yelp-map-city-inner-rank {
-    font-size: 12px;
-  }
+	.yelp-map-city-inner-rank {
+		font-size: 12px;
+	}
 
-  .yelp-map-city-label {
-    display: block;
-    font-size: 12px;
-  }
+	.yelp-map-city-label {
+		display: block;
+		font-size: 12px;
+	}
 }
 @media only screen and (min-width: 1000px) {
-  .yelp-map-city-inner-rank {
-    font-size: 12px;
-  }
+	.yelp-map-city-inner-rank {
+		font-size: 12px;
+	}
 
-  .yelp-map-city-label {
-    font-size: 14px;
-  }
+	.yelp-map-city-label {
+		font-size: 14px;
+	}
 }
 
 .table-container {
-  table {
-    border-collapse: collapse;
-    border-radius: 2px;
+	table {
+		border-collapse: collapse;
+		border-radius: 2px;
 
-    thead {
-      font-family: $content;
-      text-align: left;
-      color: white;
-      background-color: $dark;
+		thead {
+			font-family: $content;
+			text-align: left;
+			color: white;
+			background-color: $dark;
 
-      th {
-        padding: 4px 8px;
+			th {
+				padding: 4px 8px;
 
-        &:first-child {
-          border-radius: 2px 0 0 0;
-        }
+				&:first-child {
+					border-radius: 2px 0 0 0;
+				}
 
-        &:last-child {
-          border-radius: 0 2px 0 0;
-        }
-      }
-    }
+				&:last-child {
+					border-radius: 0 2px 0 0;
+				}
+			}
+		}
 
-    tbody {
-      font-size: 14px;
-      font-family: $content;
+		tbody {
+			font-size: 14px;
+			font-family: $content;
 
-      td {
-        padding: 4px 8px;
-        color: $black;
-      }
+			td {
+				padding: 4px 8px;
+				color: $black;
+			}
 
-      tr {
-        &:nth-child(even) {
-          background-color: $gray4;
-        }
+			tr {
+				&:nth-child(even) {
+					background-color: $gray4;
+				}
 
-        &:nth-child(odd) {
-          background-color: white;
-        }
-      }
-    }
-  }
+				&:nth-child(odd) {
+					background-color: white;
+				}
+			}
+		}
+	}
 }
 
-.dark {
-  .table-container {
-    table {
-      thead {
-        background-color: rgba(white, .25);
-      }
+.df-wrapper.dark {
+	.table-container {
+		table {
+			thead {
+				background-color: rgba(white, .25);
+			}
 
-      tbody {
-        td {
-          color: white;
-        }
+			tbody {
+				td {
+					color: white;
+				}
 
-        tr {
-          &:nth-child(even) {
-            background-color: rgba(white, 0.1);
-          }
+				tr {
+					&:nth-child(even) {
+						background-color: rgba(white, 0.1);
+					}
 
-          &:nth-child(odd) {
-            background-color: $dark;
-          }
-        }
-      }
-    }
-  }
+					&:nth-child(odd) {
+						background-color: $dark;
+					}
+				}
+			}
+		}
+	}
 }

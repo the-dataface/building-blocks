@@ -1,17 +1,17 @@
 @import '_variables';
 
 .map-container {
-  height: 600px;
+	height: 600px;
 }
 
 .map-container .country-lines {
-  fill: $mapcolorDark;
-  stroke: #fff;
+	fill: $mapcolorDark;
+	stroke: #fff;
 }
 
-.dark {
-  .map-container .country-lines {
-    fill: $mapcolorLight;
-    stroke: $dark;
-  }
+.df-wrapper.dark {
+	.map-container .country-lines {
+		fill: $mapcolorLight;
+		stroke: $dark;
+	}
 }
