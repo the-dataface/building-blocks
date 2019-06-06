@@ -92,7 +92,7 @@ function mouseout() {
 
 export function setup() {
   outerW = container.node().offsetWidth;
-  outerH = data.length * barH;
+  outerH = container.node().offsetHeight;
 
   margin = {
     left: 50,
