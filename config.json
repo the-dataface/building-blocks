@@ -83,6 +83,12 @@
         "html": ["horizontalBarChart.hbs"],
         "data": ["horizontalBarChart.csv"]
       },
+      "verticalBarChart": {
+        "js": ["verticalBarChart.js"],
+        "css": ["verticalBarChart.scss"],
+        "html": ["verticalBarChart.hbs"],
+        "data": ["verticalBarChart.csv"]
+      },
       "lineChart": {
         "js": ["lineChart.js"],
         "css": ["lineChart.scss"],
