@@ -1,0 +1,27 @@
+@import '_variables';
+
+.map-container {
+	height: 600px;
+
+	.bubble {
+		fill: $mapHighlight;
+	}
+
+	.bubble-label text {
+		font-family: $headline !important;
+		fill: white;
+		text-anchor: middle;
+	}
+}
+
+.map-container .state-lines {
+	fill: $mapcolorDark;
+	stroke: $themeBG;
+}
+
+.df-wrapper.dark {
+	.map-container .state-lines {
+		fill: $mapcolorLight;
+		stroke: $dark;
+	}
+}
