@@ -84,7 +84,7 @@ function mousemove(d) {
 
 	tooltip.style('display', 'block')
 		.style('transform', util.tooltipPosition(w, margin, xPos, yPos, tooltipW))
-		.html(`<h6>${d.name}</h6><p><strong>y</strong>: ${d.yVal}`);
+		.html(`<h6>${d[xAccessor]}</h6><p><strong>y</strong>: ${d[yAccessor]}`);
 }
 
 function mouseout() {
@@ -105,7 +105,7 @@ export function setup() {
 	w = outerW - margin.left - margin.right;
 	h = outerH - margin.top - margin.bottom;
 
-	const xExtent = data.map(d => d.name);
+	const xExtent = data.map(d => d[xAccessor]);
 	const max = d3.max(data, d => d[yAccessor]);
 
 	x = d3.scaleBand().rangeRound([0, w]).domain(xExtent).padding(0.1);
@@ -118,7 +118,7 @@ export function setup() {
 export function init() {
 	d3.loadData('./assets/data/verticalBarChart.csv', function(err, res) {
 		data = res[0].map(d => {
-			d.yVal = +d.yVal;
+			d[yAccessor] = +d[yAccessor];
 			return d;
 		})
 		data.sort((a, b) => a[yAccessor] - b[yAccessor]);

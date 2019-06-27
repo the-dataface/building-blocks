@@ -23,7 +23,8 @@ let data,
 	r;
 
 const xAccessor = 'xVal',
-	yAccessor = 'yVal';
+	yAccessor = 'yVal',
+	nestAccessor = 'name';
 
 const parseX = d3.timeParse('%Y-%m-%d'),
 	formatX = d3.timeFormat('%Y-%m');
@@ -94,13 +95,13 @@ function mouseover(d) {
 	tooltip.style('display', 'block')
 		.style('top', margin.top + 'px')
 		.style('left', margin.left + 'px')
-		.style('transform', util.tooltipPosition(w, margin, x(d.xVal), y(d.yVal), tooltipW))
-		.html(`<h6>${d.name}</h6><p><strong>Date</strong>: ${formatX(d.xVal)}<br><strong>Value</strong>: ${d.yVal}`);
+		.style('transform', util.tooltipPosition(w, margin, x(d[xAccessor]), y(d[yAccessor]), tooltipW))
+		.html(`<h6>${d[nestAccessor]}</h6><p><strong>Date</strong>: ${formatX(d[xAccessor])}<br><strong>Value</strong>: ${d[yAccessor]}`);
 
 	g.append('circle')
 		.attr('class', 'focus')
 		.attr('r', 3)
-		.attr('transform', `translate(${x(d.xVal)}, ${y(d.yVal)})`)
+		.attr('transform', `translate(${x(d[xAccessor])}, ${y(d[yAccessor])})`)
 		.style('pointer-events', 'none');
 }
 
@@ -110,8 +111,8 @@ function mouseout() {
 }
 
 export function setup() {
-	outerW = container.node().offsetWidth,
-		outerH = container.node().offsetHeight;
+	outerW = container.node().offsetWidth;
+	outerH = container.node().offsetHeight;
 
 	margin = {
 		left: 20,
@@ -120,22 +121,18 @@ export function setup() {
 		bottom: 20
 	};
 
-	w = outerW - margin.left - margin.right,
-		h = outerH - margin.top - margin.bottom;
+	w = outerW - margin.left - margin.right;
+	h = outerH - margin.top - margin.bottom;
 
-	const xExtent = d3.extent(data, d => d[xAccessor]);
-	const yExtent = d3.extent(data, d => d[yAccessor]);
+	const xExtent = d3.extent(data, d => d[xAccessor]),
+		yExtent = d3.extent(data, d => d[yAccessor]);
 
-	x = d3.scaleTime().domain(xExtent).range([0, w]),
-		y = d3.scaleLinear().domain([0, yExtent[1]]).range([h, 0]);
+	x = d3.scaleTime().domain(xExtent).range([0, w]);
+	y = d3.scaleLinear().domain([0, yExtent[1]]).range([h, 0]);
 
 	line = d3.line()
-		.x(function(d) {
-			return x(d[xAccessor])
-		})
-		.y(function(d) {
-			return y(d[yAccessor])
-		})
+		.x((d) => x(d[xAccessor]))
+		.y((d) => y(d[yAccessor]))
 		.curve(d3.curveMonotoneX);
 
 	build();
@@ -150,7 +147,7 @@ export function init() {
 		})
 
 		nested = d3.nest()
-			.key(d => d.name)
+			.key(d => d[nestAccessor])
 			.entries(data);
 
 		setup();

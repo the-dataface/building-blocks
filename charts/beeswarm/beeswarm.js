@@ -100,7 +100,7 @@ function mouseover(d) {
 		.style('top', margin.top + 'px')
 		.style('left', margin.left + 'px')
 		.style('transform', util.tooltipPosition(w, margin, d.x, d.y, tooltipW))
-		.html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d.xVal}<br><strong>y</strong>: ${d.yVal}`);
+		.html(`<h6>${d.name}</h6><p><strong>x</strong>: ${d[xAccessor]}<br><strong>r</strong>: ${d[rAccessor]}`);
 }
 
 function mouseout() {
@@ -133,7 +133,8 @@ export function setup() {
 export function init() {
 	d3.loadData('./assets/data/beeswarm.csv', function(err, res) {
 		data = res[0].map(d => {
-			d.xVal = +d.xVal;
+			d[xAccessor] = +d[xAccessor];
+			d[rAccessor] = +d[rAccessor];
 			return d;
 		})
 		setup();
