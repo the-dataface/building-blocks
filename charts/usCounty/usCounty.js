@@ -24,56 +24,54 @@ function build() {
 	// Set up containers
 	container.selectAll('*:not(.tooltip)').remove();
 
-    svg = container.append('svg')
-        .attr("viewBox", "0 0 960 600")
-        .style("width", "100%")
-        .style("height", "auto");
+	svg = container.append('svg')
+		.attr("viewBox", "0 0 960 600")
+		.style("width", "100%")
+		.style("height", "auto");
 
 	g = svg.append('g')
 		.attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-    path = d3.geoPath();
+	path = d3.geoPath();
 
-    g.append("g")
-        .attr('class', 'county-lines')
-        .selectAll('path')
-        .data(topojson.feature(counties, counties.objects.counties).features)
-        .enter()
-        .append('path')
-        .attr("d", path)
-        .attr("fill", "white")
-        .attr("stroke", "grey")
-        .attr("stroke-linejoin", "round")
-        .on('mouseover', mouseover)
-        .on('mousemove', mousemove)
-        .on('mouseout', mouseout);
+	g.append("g")
+		.attr('class', 'county-lines')
+		.selectAll('path')
+		.data(topojson.feature(counties, counties.objects.counties).features)
+		.enter()
+		.append('path')
+		.attr("d", path)
+		.attr("stroke-linejoin", "round")
+		.on('mouseover', mouseover)
+		.on('mousemove', mousemove)
+		.on('mouseout', mouseout);
 
-    g.append("path")
-        .datum(topojson.feature(counties, counties.objects.states, (a, b) => a !== b))
-        .attr("fill", "none")
-        .attr("stroke", "grey")
-        .attr('stroke-width', 1)
-        .attr("stroke-linejoin", "round")
-        .attr("d", path);
+	g.append("path")
+		.datum(topojson.feature(counties, counties.objects.states, (a, b) => a !== b))
+		// .attr("fill", "none")
+		// .attr("stroke", "grey")
+		.attr('stroke-width', 1)
+		.attr("stroke-linejoin", "round")
+		.attr("d", path);
 
-    g.append("path")
-        .datum(topojson.feature(counties, counties.objects.nation, (a, b) => a !== b))
-        .attr("fill", "none")
-        .attr("stroke", "grey")
-        .attr('stroke-width', 1)
-        .attr("stroke-linejoin", "round")
-        .attr("d", path);
+	g.append("path")
+		.datum(topojson.feature(counties, counties.objects.nation, (a, b) => a !== b))
+		// .attr("fill", "none")
+		// .attr("stroke", "grey")
+		.attr('stroke-width', 1)
+		.attr("stroke-linejoin", "round")
+		.attr("d", path);
 
 }
 
 function mouseover(d) {
-    d = d.properties;
-    console.log(d);
+	d = d.properties;
+	console.log(d);
 
 	tooltip.style('display', 'block')
-        .html(`<h6>${d.name}</h6>`);
-        
-    mousemove();
+		.html(`<h6>${d.name}</h6>`);
+
+	mousemove();
 }
 
 function mousemove() {
@@ -101,7 +99,7 @@ export function setup() {
 	w = outerW - margin.left - margin.right;
 	h = outerH - margin.top - margin.bottom;
 
-    //getProjectionParameters();
+	//getProjectionParameters();
 	build();
 }
 
