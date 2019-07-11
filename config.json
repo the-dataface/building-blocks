@@ -1,7 +1,13 @@
 {
 	"charts": {
-		"types": ["scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "usBubble", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm", "map_list", "verticalBarChart"],
+		"types": ["arrowChart", "scatterPlot", "smallMultipleRadarChart", "smallMultipleArmadilloChart", "smallMultipleTable", "smallMultipleBarChart", "table", "smallMultipleLineChart", "usCounty", "usState", "usBubble", "scrollyCenter", "scrollyLeft", "scrollyRight", "horizontalBarChart", "lineChart", "beeswarm", "map_list", "verticalBarChart"],
 		"files": {
+			"arrowChart": {
+				"js": ["arrowChart.js"],
+				"css": ["arrowChart.scss"],
+				"html": ["arrowChart.hbs"],
+				"data": ["arrowChart.csv"]
+			},
 			"scatterPlot": {
 				"js": ["scatterPlot.js"],
 				"css": ["scatterPlot.scss"],

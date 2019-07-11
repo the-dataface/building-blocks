@@ -1,0 +1,13 @@
+@import '_variables';
+
+.arrow-chart-container {
+	.axis {
+		line {
+			stroke-dasharray: 0 0 !important;
+		}
+	}
+
+	.arrow-label {
+		fill: $black;
+	}
+}
