@@ -4,7 +4,7 @@
 	height: 600px;
 
 	.bubble {
-		fill: $mapHighlight;
+		fill: $map-highlight;
 	}
 
 	.bubble-label text {
@@ -15,13 +15,13 @@
 }
 
 .map-container .state-lines {
-	fill: $mapcolorDark;
-	stroke: $themeBG;
+	fill: $mapcolor-dark;
+	stroke: $theme-bg;
 }
 
 .df-wrapper.dark {
 	.map-container .state-lines {
-		fill: $mapcolorLight;
+		fill: $mapcolor-light;
 		stroke: $dark;
 	}
 }

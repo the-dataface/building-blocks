@@ -5,13 +5,13 @@
 }
 
 .map-container .state-lines {
-	fill: $mapcolorDark;
+	fill: $mapcolor-dark;
 	stroke: #fff;
 }
 
 .df-wrapper.dark {
 	.map-container .state-lines {
-		fill: $mapcolorLight;
+		fill: $mapcolor-light;
 		stroke: $dark;
 	}
 }
