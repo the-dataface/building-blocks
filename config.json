@@ -100,6 +100,12 @@
 				"css": ["verticalBarChart.scss"],
 				"html": ["verticalBarChart.hbs"],
 				"data": ["verticalBarChart.csv"]
+      },
+			"stackedBarChart": {
+				"js": ["stackedBarChart.js"],
+				"css": ["stackedBarChart.scss"],
+				"html": ["stackedBarChart.hbs"],
+				"data": ["stackedBarChart.csv"]
 			},
 			"lineChart": {
 				"js": ["lineChart.js"],
